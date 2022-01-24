@@ -1,0 +1,720 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Iterative Development</title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Iterative Websites Development">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Navigating Website</li><li class="chapter-item expanded "><a href="reading.html"><strong aria-hidden="true">2.</strong> Navigate</a></li><li class="chapter-item expanded affix "><li class="part-title">Overview</li><li class="chapter-item expanded "><a href="overview.html"><strong aria-hidden="true">3.</strong> Overview</a></li><li class="chapter-item expanded affix "><li class="part-title">Teams</li><li class="chapter-item expanded "><a href="teams.html"><strong aria-hidden="true">4.</strong> Teams</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="define.html"><strong aria-hidden="true">4.1.</strong> Define</a></li><li class="chapter-item expanded "><a href="design.html"><strong aria-hidden="true">4.2.</strong> Design</a></li><li class="chapter-item expanded "><a href="develop.html"><strong aria-hidden="true">4.3.</strong> Develop</a></li><li class="chapter-item expanded "><a href="maintain.html"><strong aria-hidden="true">4.4.</strong> Maintain</a></li></ol></li><li class="chapter-item expanded "><a href="tools.html"><strong aria-hidden="true">5.</strong> Development Tools</a></li><li class="chapter-item expanded "><a href="webcomp.html"><strong aria-hidden="true">6.</strong> Web Components</a></li><li class="chapter-item expanded affix "><li class="part-title">Workstations</li><li class="chapter-item expanded "><a href="workstations.html"><strong aria-hidden="true">7.</strong> Workstations</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="apple.html"><strong aria-hidden="true">7.1.</strong> Apple</a></li><li class="chapter-item expanded "><a href="linux.html"><strong aria-hidden="true">7.2.</strong> Linux</a></li><li class="chapter-item expanded "><a href="microsoft.html"><strong aria-hidden="true">7.3.</strong> Microsoft</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Programming</li><li class="chapter-item expanded "><a href="programming.html"><strong aria-hidden="true">8.</strong> Programming</a></li><li class="chapter-item expanded affix "><li class="part-title">Company</li><li class="chapter-item expanded "><a href="company.html"><strong aria-hidden="true">9.</strong> Company</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="contact.html"><strong aria-hidden="true">9.1.</strong> Contact</a></li><li class="chapter-item expanded "><a href="hypecycle.html"><strong aria-hidden="true">9.2.</strong> Hype Cycle</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Iterative Development</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <div style="break-before: page; page-break-before: always;"></div><h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<blockquote>
+<p><em><strong>Caution</strong></em></p>
+<p>Work in progress - v 0.1.0</p>
+<p>Jan 20, 2022</p>
+</blockquote>
+<hr />
+<p>This website was created by <a href="company.html">johntelford.com LLC</a>. It discusses optimizing website project life time costs. It describes a framework for developing and deploying websites. It is based on <em>Iterative Development</em> and <em>Web Component Technologies</em>.</p>
+<hr />
+<div style="break-before: page; page-break-before: always;"></div><h1 id="navigating-website"><a class="header" href="#navigating-website">Navigating Website</a></h1>
+<blockquote>
+<p>The website is organized into <em>chapters</em>.
+Each chapter is a separate page.</p>
+</blockquote>
+<hr />
+<h2 id="navigation"><a class="header" href="#navigation">Navigation</a></h2>
+<p>There are several methods for navigating through the chapters of the website.</p>
+<p>The <strong>sidebar</strong> on the left provides a list of all chapters.
+Clicking on any of the chapter titles will load that page.</p>
+<p>The sidebar may not automatically appear if the window is too narrow, particularly on mobile displays.
+In that situation, the menu icon (three horizontal bars) at the top-left of the page can be pressed to open and close the sidebar.</p>
+<p>The <strong>arrow buttons</strong> at the bottom of the page can be used to navigate to the previous or the next chapter.</p>
+<p>The <strong>left and right arrow keys</strong> on the keyboard can be used to navigate to the previous or the next chapter.</p>
+<h2 id="top-menu-bar"><a class="header" href="#top-menu-bar">Top menu bar</a></h2>
+<p>The menu bar at the top of the page provides some icons for interacting with the website.</p>
+<table><thead><tr><th>Icon</th><th>Description</th></tr></thead><tbody>
+<tr><td><i class="fa fa-bars"></i></td><td>Opens and closes the chapter listing sidebar.</td></tr>
+<tr><td><i class="fa fa-paint-brush"></i></td><td>Opens a picker to choose a different color theme.</td></tr>
+<tr><td><i class="fa fa-search"></i></td><td>Opens a search bar for searching within the book.</td></tr>
+<tr><td><i class="fa fa-print"></i></td><td>Instructs the web browser to print the entire book.</td></tr>
+</tbody></table>
+<p>Tapping the menu bar will scroll the page to the top.</p>
+<h2 id="search"><a class="header" href="#search">Search</a></h2>
+<p>Pressing the search icon (<i class="fa fa-search"></i>) in the menu bar, or pressing the <code>S</code> key on the keyboard will open an input box for entering search terms.
+Typing some terms will show matching chapters and sections in real time.</p>
+<p>Clicking any of the results will jump to that section.
+The up and down arrow keys can be used to navigate the results, and enter will open the highlighted section.</p>
+<p>After loading a search result, the matching search terms will be highlighted in the text.
+Clicking a highlighted word or pressing the <code>Esc</code> key will remove the highlighting.</p>
+<hr />
+<div style="break-before: page; page-break-before: always;"></div><h1 id="overview"><a class="header" href="#overview">Overview</a></h1>
+<blockquote>
+<p>This website discusses optimizing website project life time costs. It describes a framework for developing and deploying websites. It is based on <em>Iterative Development</em> and <em>Web Component Technologies</em>.</p>
+<p>The basic idea behind <em>Iterative Development</em> is to develop a system through repeated cycles (iterative) and in smaller portions at a time (incremental), allowing iterative development teams to take advantage of what was learned during development of earlier parts or versions of the system. </p>
+<p><em>Web Component Technologies</em> enable creating reusable custom elements, with their functionality encapsulated away from the rest of the code, and utilized in website development.</p>
+<p>Iterative web development teams working together can help optimizing website costs and lower some the difficulties creating websites.</p>
+</blockquote>
+<hr />
+<h2 id="difficulties"><a class="header" href="#difficulties">Difficulties</a></h2>
+<p>Creating and maintaining websites that meet users needs are difficult, complex, time consuming.</p>
+<p>Website life time cost will be higher if defects are not mitigated early.</p>
+<h2 id="slow"><a class="header" href="#slow">Slow</a></h2>
+<p>More than half of mobile user will leave a page that takes longer than 3 seconds to load and may never return. Optimizing websites to maximize performance is important.</p>
+<h2 id="content"><a class="header" href="#content">Content</a></h2>
+<p>Most People visit websites for content. They have little interest in how the content is created or how it gets to their screen. Most access websites using mobile devices. Everyone wants websites pages to load quick and pages that conform to their screen size. The website look and feel, users experience, functionality, also needs to be consistent and complement the content.</p>
+<p>The Google <a href="https://pagespeed.web.dev/">PageSpeed Insights</a> website reports on the performance of a website page on both mobile and desktop devices, and provides suggestions on how pages may be improved.</p>
+<p>Google reports mobile website pages load within 22 seconds on average. However, 53 percent of mobile users will leave a page that takes longer than 3 seconds to load.</p>
+<hr />
+<h2 id="iterative-development-teams"><a class="header" href="#iterative-development-teams">Iterative Development Teams</a></h2>
+<p>Teams work together delivering their work to other teams for the life time of website.</p>
+<p>The slightest errors or security issues will require remediations sometime during the life time of the website.</p>
+<p>This website discusses optimizing website project life time costs. It describes a framework for developing and deploying websites. It is based on <em>Iterative Development</em> and <em>web component technologies</em>.</p>
+<hr />
+<img src="iterativedev.png" height=400 width=400 />
+<p><strong>Iterative website development</strong></p>
+<hr />
+<p>Iterative website development enables the <em>Define, Design, Develop, Deploy and Maintain</em> teams to be operational at the same time, including testing and remediating defects.</p>
+<hr />
+<h2 id="defect-remediation-costs"><a class="header" href="#defect-remediation-costs">Defect Remediation Costs</a></h2>
+<p>It is possible that the highest cost over the life time of a website project may be remediating defects.</p>
+<p>Content and software defects cost less when found early, as this chart shows:</p>
+<hr />
+<img src="bugFixChart.jpg" height= 400 width=400 />
+<p><strong>Defect Remediation Costs</strong></p>
+<hr />
+<p>Some of the early defect detection mechanisms built into the framework are:</p>
+<ul>
+<li><code>vscode</code> editor tool extensions continually check for syntax and other errors</li>
+<li>Fast refresh live-editing quickly show changes while typing, and any runtime errors</li>
+<li>Team members may frequently deploy their copy of the project repository with their changes to private websites where stakeholders can see them and give feedback.</li>
+</ul>
+<hr />
+<h2 id="minimum-viable-product"><a class="header" href="#minimum-viable-product">Minimum Viable Product</a></h2>
+<p>The first goal of website development project is get to a <em>Minimum Viable Product</em>. It is a way to understand whether the website project idea will work or not. It is a stage in website development where the <em>must</em> features are implemented and ready to test with end-users. It gives feedback about the positive aspects and shortcomings.</p>
+<p>The next steps are adding the <em>want</em> features, until stakeholders agree the website is production quality and ready to be deployed.</p>
+<hr />
+<div style="break-before: page; page-break-before: always;"></div><h1 id="iterative-development-teams-1"><a class="header" href="#iterative-development-teams-1">Iterative Development Teams</a></h1>
+<blockquote>
+<p>Teams work together delivering their work to other teams for the life time of website.</p>
+<p>The slightest errors or security issues will require remediations sometime during the life time of the website.</p>
+</blockquote>
+<p>This website discusses optimizing website project life time costs. It describes a framework for developing and deploying websites. It is based on <em>Iterative Development</em> and <em>web component technologies</em>.</p>
+<img src="iterativedev.png" height=400 width=400 />
+<p><strong>Iterative Development Teams</strong></p>
+<p>Iterative website development enables the <em>Define, Design, Develop, Deploy and Maintain</em> teams to be operational at the same time, including testing and remediating defects.</p>
+<hr />
+<h2 id="teams-prerequisites"><a class="header" href="#teams-prerequisites">Teams Prerequisites</a></h2>
+<h3 id="define"><a class="header" href="#define">Define</a></h3>
+<p>The <em>Define</em> team prerequisites are defining what the project is about, funding, purpose, functionality, stakeholders, content, <em>must</em> and <em>want</em> features, and security.</p>
+<h3 id="design"><a class="header" href="#design">Design</a></h3>
+<p>The <em>Design</em> team prerequisites are making decisions about Website Design, Consistency, Theme, Color Scheme, Typology, Navigation, and User Interaction.</p>
+<h3 id="develop"><a class="header" href="#develop">Develop</a></h3>
+<p>The <em>Develop</em> team prerequisites are making decisions about resources required to transform the <em>Define</em> and <em>Design</em> work into a website, and infrastructure. This includes Development Framework and programming tools.</p>
+<h3 id="deploy"><a class="header" href="#deploy">Deploy</a></h3>
+<p>The <em>Deploy</em> team prerequisites are:</p>
+<p>: Making decisions about what resources are required for deploying production version of the website to the Internet.</p>
+<p>: Making decisions about what resources are required for team developers working on features, fixes, or testing to deploy private Internet websites with their changes, without disturbing other developers work or the production version.</p>
+<h3 id="maintain"><a class="header" href="#maintain">Maintain</a></h3>
+<p>The <em>Maintain</em> team prerequisites are making decisions about remediating <em>Define</em>, <em>Design</em>,<em>Develop</em>, <em>Deploy</em>, or <em>Security</em> defects.</p>
+<hr />
+<div style="break-before: page; page-break-before: always;"></div><h1 id="define-team"><a class="header" href="#define-team">Define Team</a></h1>
+<blockquote>
+<p>Defining websites helps the <em>Iterative Development</em> teams and stakeholders to understand the project.</p>
+<p><em>Define</em> website prerequisites is the first steps in optimizing website costs.</p>
+</blockquote>
+<h3 id="prerequisites"><a class="header" href="#prerequisites">Prerequisites</a></h3>
+<p>Websites Define prerequisites are what the project is about, including <em>Purpose, Project Funding, Website Type, Stakeholders, Musts and Wants Functionality, Website Media, and Security</em></p>
+<h3 id="purpose"><a class="header" href="#purpose">Purpose</a></h3>
+<p>Knowing the purpose of the website project enables <em>Iterative Development</em> teams to separate goals into musts and wants</p>
+<h3 id="project-funding"><a class="header" href="#project-funding">Project Funding</a></h3>
+<p>Project funding is a primary factor in the success of website projects. It enables teams to have skilled people, equipment, and tools.</p>
+<h3 id="website-type"><a class="header" href="#website-type">Website Type</a></h3>
+<p>Is the website:</p>
+<ul>
+<li>Brochureware ?</li>
+<li>Commerce ?</li>
+<li>Something else ?</li>
+</ul>
+<h3 id="stakeholders"><a class="header" href="#stakeholders">Stakeholders</a></h3>
+<p>The <em>Iterative Development</em> teams deploy private websites for stakeholders review while creating new, updating, fixing, or exploring new features.</p>
+<p>Who are the stakeholders?</p>
+<h3 id="musts-and-wants-functionality"><a class="header" href="#musts-and-wants-functionality">Musts and Wants Functionality</a></h3>
+<p>When steakholders agree the website <em>Musts</em> functionalities are operational, then it is a <a href="/docs/overview/#minimum-viable-product">Minimum Viable Product</a> and ready for testing.</p>
+<p>When steakholders agree the website <em>Wants</em> functionalities are operational, the website is production quality and ready to be deployed to the Internet.</p>
+<h3 id="website-media"><a class="header" href="#website-media">Website Media</a></h3>
+<p>What is the website message ?</p>
+<p>What existing and new website media will be in website pages?</p>
+<h3 id="security"><a class="header" href="#security">Security</a></h3>
+<p>What are the website security needs?</p>
+<hr />
+<div style="break-before: page; page-break-before: always;"></div><h1 id="design-team"><a class="header" href="#design-team">Design Team</a></h1>
+<blockquote>
+<p>Website <em>Design</em> is creating the website look and feel. Useful websites require the user experience and functionality be consistence and complement the content.</p>
+</blockquote>
+<h2 id="overview-1"><a class="header" href="#overview-1">Overview</a></h2>
+<p>The core foundations of a  user's website experience are:</p>
+<blockquote>
+<ul>
+<li>
+<p><strong>Fast</strong> - Website responds quickly to user interactions with  smooth scrolling.</p>
+</li>
+<li>
+<p><strong>Integrated</strong> - The website uses the full  capabilities of the user device to create an experience true to the device.</p>
+</li>
+<li>
+<p><strong>Reliable</strong> - Load instantly and reliably even in  uncertain network conditions.</p>
+</li>
+<li>
+<p><strong>Engaging</strong> - Keeps the user coming back to the app  that designed to look and feel natural.</p>
+</li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="prerequisites-1"><a class="header" href="#prerequisites-1">Prerequisites</a></h2>
+<p>Website design prerequisites are making decisions about , Responsive Website Design, Consistency, Theme, Color Scheme, Typology, Navigation, and User Interaction.</p>
+<p>I have reincarnated JohnTelford.com using several of these and other <a href="https://docusaurus.io/docs#comparison-with-other-tools">Development Frameworks</a>. The last two reincarnations have been:</p>
+<h3 id="docusaurus"><a class="header" href="#docusaurus">Docusaurus</a></h3>
+<img src= "docusauruslogo.png" height=100 width=100  />
+<p>The perquisites requirements for this website can be realized using the <a href="https://docusaurus.io">Docusaurus</a> development framework. Any of the Docusaurus attributes may be changes.</p>
+<p>The website design prerequisites can be realized using the Docusaurus development framework.</p>
+<h3 id="mdbook"><a class="header" href="#mdbook">mdbook</a></h3>
+<img src= "markdownlogo.png" height=100 width=150 />
+<p>The <a href="https://crates.io/crates/mdbook">mdbook</a> uses <a href="https://www.markdownguide.org">markdown</a> with imbedded HTML. It does not abstract<code>React</code></p>
+<p>This website is Brochureware. I found it was faster, cleaner, and less complicated to create it using <code>mdbook</code>.</p>
+<p>I recommend using <code>Docusaurus</code> for a more complex user interface and material because it abstracts <code>react</code> so one can use <code>mdx</code> and <code>jsx</code>.</p>
+<hr />
+<h2 id="responsive-website-design"><a class="header" href="#responsive-website-design">Responsive Website Design</a></h2>
+<p>The majority of users access websites using mobile devices. They and others have little tolerance for slow loading website pages or pages that do not conform to their screen size.</p>
+<p>Website design ensures pages load quickly and adjust to display size. Website pages are display correctly on a variety of devices and window or screen size. The website look and feel, users experience, and functionality maintain consistency.</p>
+<hr />
+<h3 id="consistency"><a class="header" href="#consistency">Consistency</a></h3>
+<p>Website consistency is the look and feel of the site. The users experience, and functionality does not vary between website pages.</p>
+<hr />
+<h3 id="theme"><a class="header" href="#theme">Theme</a></h3>
+<p>The website theme is the Color Scheme, Typology, Navigation, and User Interface.</p>
+<ul>
+<li>
+<p>Color scheme</p>
+<ul>
+<li>Header</li>
+<li>Website page</li>
+<li>Fonts</li>
+<li>Footer</li>
+</ul>
+</li>
+<li>
+<p>Typology</p>
+</li>
+<li>
+<p>Navigation</p>
+</li>
+<li>
+<p>User interaction</p>
+</li>
+</ul>
+<hr />
+<div style="break-before: page; page-break-before: always;"></div><h2 id="develop-team"><a class="header" href="#develop-team">Develop Team</a></h2>
+<blockquote>
+<p><em>Develop</em> is translating <em>Define</em> and <em>Design</em> processes into website pages using abstract logical structures, rigid nonhuman website programming languages, and a variety of tools. The slightest errors or security issues will require remediation's sometime during the life time of the website.</p>
+</blockquote>
+<h3 id="prerequisites-2"><a class="header" href="#prerequisites-2">Prerequisites</a></h3>
+<p>The Develop team prerequisites are making decisions about resources required to transform the <em>Define</em> and <em>Design</em> work into a website, and infrastructure. This includes development <a href="https://docusaurus.io/docs#comparison-with-other-tools">framework</a> and programming tools.</p>
+<hr />
+<h3 id="developer-iterative-development-stack"><a class="header" href="#developer-iterative-development-stack">Developer Iterative Development Stack</a></h3>
+<blockquote>
+<p>The <em>Iterative Development Stack</em> deploys  websites to the Internet. It is device agnostic. What works for big screens, works for small screens.</p>
+</blockquote>
+<img src="webdevstack.png"  height= 840 width=500 />
+<p><strong>Developer Iterative Development Stack</strong></p>
+<hr />
+<h4 id="vscode"><a class="header" href="#vscode">VScode</a></h4>
+<img src="vscodelogo.png" height=100 width=100/>
+<blockquote>
+<p><a href="https://code.visualstudio.com">Visual Studio Code</a> (VScode) is a Microsoft product.</p>
+</blockquote>
+<p>It has become the goto editor for many. It is free, built on open source, and runs everywhere.</p>
+<p><code>VScode</code> is the command and control center for the website project.</p>
+<p>Some of the development command and control tasks are:</p>
+<ul>
+<li>Editing code and website media</li>
+<li>Use <code>git</code> and <code>GitHub</code> to manage project files. <code>Git</code>is built-in and optimized to work with Microsoft <code>GitHub</code></li>
+<li>Editor tool extensions continually check for syntax and other errors</li>
+<li>Live edit browser previews show how edits will look when deployed</li>
+<li>Deploy secure website previews to the Internet for stakeholders</li>
+<li>Deploy production website to the Internet</li>
+<li>Built-in command shell</li>
+<li>And <strong>much</strong> more</li>
+</ul>
+<hr />
+<blockquote>
+<p>The key <em>Iterative Development</em> technologies are <a href="https://git-scm.com">Git</a> and <a href="https://github.com/">GitHub</a>.</p>
+</blockquote>
+<hr />
+<h4 id="git"><a class="header" href="#git">git</a></h4>
+<img src="gitlogo.png" width=100 height=100/>
+<blockquote>
+<p><a href="https://git-scm.com/">Git</a> is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.</p>
+<p>Git is easy to learn and has a tiny footprint with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows.</p>
+</blockquote>
+<h4 id="github"><a class="header" href="#github">GitHub</a></h4>
+<img src="gitHublogo.png" width=100 height=100/>
+<blockquote>
+<p>All developers need a GitHub account
+GitHub is a Microsoft company</p>
+</blockquote>
+<p><a href="https://github.com/">GitHub</a> is a  Distributed Version Control Systems (DVCS) enabling multiple developers or teams to work separately without having an impact on the work of others. GitHub is a central online web hosted project repository for all project files. It is a unified source of truth. It helps teams collaborate and maintain the entire history of project file changes. Teams can view history of all changes and go back to previous file versions. </p>
+<p>It helps answer the questions who changed what, where, when, and why?</p>
+<p>All team members have their own local copy of the central project repository. They make changes, fix defects, add new features to their repository, without interfering with others team members, or the central repository. </p>
+<p>Team members may deploy their copy of the repository with their changes, to a private Internet website for stakeholders to see and give feedback.</p>
+<p>If the central online repository dies, a client repository can be copied back up to the server to restore it. </p>
+<p>When stakeholders determine some changes, defect fixes, or new features are ready, they will be committed to central project repository, and team members update their local copy by pulling central repository changes into their local repository. This process keeps team members up to date.</p>
+<hr />
+<h4 id="cloudflare"><a class="header" href="#cloudflare">Cloudflare</a></h4>
+<img src="cloudflarelogo.png" height=50 width=100 />
+<p><a href="https://cloudflare.com/">Cloudflare</a> Global <a href="https://en.wikipedia.org/wiki/Content_delivery_network">Content Delivery Network (CDN)</a> deploys website to the Internet. </p>
+<p>Cloudflare builds a website and deploys it when <code>git</code> pushes changes from the <em>Local Repository</em> to the <em>Central Repository</em>,  Cloudflare then automatically builds the website and deploys it to the Internet.</p>
+<p>Cloudflare can be configured to deploy public production  and private development versions of the website.</p>
+<h3 id="developer-iterative-development-stack-example"><a class="header" href="#developer-iterative-development-stack-example">Developer Iterative Development Stack Example</a></h3>
+<p>The <a href="https://yourbrainoncomputers.com/using-git-with-visual-studio-code-the-ultimate-guide/">ULTIMATE GUIDE TO USING GIT - 
+With Visual Studio Code</a> will guide you to installing and learning git, and installing Visual Studio Code and so much more.</p>
+<h4 id="github-account"><a class="header" href="#github-account">GitHub account</a></h4>
+<blockquote>
+<p>The Iterative Development Stack depends on users having a GitHub account.</p>
+</blockquote>
+<hr />
+<h4 id="developer-workflow"><a class="header" href="#developer-workflow">Developer Workflow</a></h4>
+<ul>
+<li>
+<p>Create a new project directory.</p>
+</li>
+<li>
+<p>Create and edit website project files.</p>
+</li>
+<li>
+<p>Follow the <a href="https://yourbrainoncomputers.com/using-git-with-visual-studio-code-the-ultimate-guide/">ULTIMATE GUIDE TO USING GIT - 
+</a> <em>Create New Git Repository</em> instruction.</p>
+</li>
+</ul>
+<hr />
+<p>A local repository is on your workstation and a central repository on GitHub.</p>
+<ul>
+<li>
+<p>Continue editing website project files.</p>
+</li>
+<li>
+<p>Every so often commit your changes. This insures you have a copy of the project file and project history, stored offsite in the central repository. If your workstation dies, you can quickly create a local directory on your new and improved workstation from the remote repository.</p>
+</li>
+<li>
+<p>See the <a href="https://yourbrainoncomputers.com/using-git-with-visual-studio-code-the-ultimate-guide/">ULTIMATE GUIDE TO USING GIT
+</a>. - <em>Commit a Change to Git</em></p>
+</li>
+</ul>
+<hr />
+<h4 id="website-workflow"><a class="header" href="#website-workflow">Website Workflow</a></h4>
+<ul>
+<li>
+<p>Website <a href="https://rust-lang.github.io/mdBook/">mdBook</a> files are created and edited in the local repository. </p>
+</li>
+<li>
+<p>The <code>mdBook serve</code> command renders project file edits in a browser. If viewing the page being edited, it will be updated in near real time.</p>
+</li>
+<li>
+<p>The next step is to commit file changes. The VScode <code>git</code> works with GitHub to update the  central repository with the local repository file changes.</p>
+</li>
+<li>
+<p>Cloudflare is notified by GitHub when the project central and deploys a website.</p>
+</li>
+</ul>
+<hr />
+<h3 id="team-iterative-development-stack-workflow"><a class="header" href="#team-iterative-development-stack-workflow">Team Iterative Development Stack Workflow</a></h3>
+<p>The Team Iterative Development Stack is the same as Developer Iterative Development Stack. The difference is there are more than one developer. There would be confusion and possible defects created if the developers were to directly make changes to the same repository.</p>
+<p>A solution to this problem is to have one central repository controlled by a gatekeeper. Each team member <code>fork</code>s a copy to their GetHub account and makes a <code>git clone</code> of it on their workstation. </p>
+<p>Each developer makes changes to their clone repository. They cannot directly make changes to the central repository. Team members may deploy their copy of the clone repository with their changes, to a private Internet website for stakeholders to see and give feedback.</p>
+<p>This process is managed using Microsoft free <a href="https://github.com/team">Git Hub for Teams</a> product. When stakeholders determine a developers changes, defect fixes, or new features are ready, a GitHub <code>pull</code> request is made by the developer to the central project repository. Project team members and the gatekeeper are notified by GitHub of the <code>pull</code> request. They may examine, comment on, suggest possible changes, and possibly test the code. When the team agrees on the developers changes, they are committed to the central project repository by the gatekeeper. This process is repeated for each developer changes. Iterations of the central project repository may be deployed by the gatekeeper to a private website for stakeholders viewing.</p>
+<p>The next step is each developer <code>pull</code>s the central repository changes and commits them to their copy of the central project repository. This process keeps team members up to date</p>
+<p>The central project repository may be deployed to the public Internet by the gatekeeper 
+after stakeholders agree there have been sufficient iterations.</p>
+<hr />
+<div style="break-before: page; page-break-before: always;"></div><h2 id="maintain-1"><a class="header" href="#maintain-1">Maintain</a></h2>
+<blockquote>
+<p><em>Maintain</em> is remediating <em>Define</em>, <em>Design</em>,<em>Develop</em>, <em>Deploy</em>, or <em>Security</em> problems.</p>
+</blockquote>
+<hr />
+<p>Members from all of the teams may be on the <em>Maintain</em> team to solve defects.</p>
+<hr />
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tools"><a class="header" href="#tools">Tools</a></h1>
+<hr />
+<h2 id="hardware"><a class="header" href="#hardware">Hardware</a></h2>
+<p>The primary hardware tools for website developers are <a href="workstations">Workstations</a>. They need to be fast, reliable, supportable, secure, support large or multiple screens, and work with website software development applications</p>
+<hr />
+<h2 id="software"><a class="header" href="#software">Software</a></h2>
+<p>Some tools that help detect software defects early are:</p>
+<ul>
+<li><code>vscode</code> extensions</li>
+<li><code>SiteLinkChecker</code> app</li>
+<li><code>Fork</code> is a quick way to checks repository commits and file changes</li>
+</ul>
+<hr />
+<h2 id="ia-writer"><a class="header" href="#ia-writer">iA Writer</a></h2>
+<p>Editing Markdown / MDX website pages and blog posts using iA Writer seems to be faster because of focus and grammar features with live preview.</p>
+<img src="ialogo.png" height=150 width=150 />
+<ul>
+<li><a href="https://apps.apple.com/us/app/ia-writer/id775737590?mt=12">iA Writer</a> is a Markdown Writing app:
+<ul>
+<li>Faster way to write MDX website media </li>
+<li>Extensive Style Check</li>
+<li>Focus
+<ul>
+<li>Sentence</li>
+<li>Paragraph</li>
+</ul>
+</li>
+<li>Available for Mac, iOS, Windows, and Android</li>
+</ul>
+</li>
+</ul>
+<p>When one or more pages have been edited using iA Writer, the  <a href="https://www.econtechnologies.com/chronosync/overview.html">ChronoSync</a> app can be used to synchronize files from iA Writer to <code>vscode</code> or visa versa. Since the  iA Writer files are store in iCloud, they can be edited remotely using  laptops, smart phones, or pads.</p>
+<hr />
+<div style="break-before: page; page-break-before: always;"></div><h1 id="web-components"><a class="header" href="#web-components">Web Components</a></h1>
+<hr />
+<p><em>Web Development Components For The Component Era.</em> Web Components are independent and reusable bits of code. They serve the same purpose as <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a> functions, but work in isolation.</p>
+<p>Web  components are 
+A set of web platform APIs that enables creating new custom, reusable, encapsulated <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> tags to use in web pages and web apps.</p>
+<p>Based on existing web standards. They enable web developers to extend <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> with new elements with encapsulated styling and custom behavior.</p>
+<hr />
+<h2 id="react"><a class="header" href="#react">React</a></h2>
+<img src="reactLogo.png" height=200 width=200 />
+<p><a href="https://reactjs.org/">React</a> is for building user interfaces (UIs). It is an open-source, front end, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a> library created by Facebook.</p>
+<p>React is a declarative, efficient, and flexible <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a> library. It enables creating complex UIs from small and isolated pieces of code called “components”.</p>
+<p>React code is made of entities called components. Components can be rendered to a particular element. A component is the core building block of a React application. Every component resides in the same space, but works independently from one another and merges all them in a parent component, which is the final UI of the application.&quot;</p>
+<hr />
+<h2 id="react-jsx"><a class="header" href="#react-jsx">React JSX</a></h2>
+<img src="jsxlogo.png" height=200 width=200 />
+<p>The core development technology of <a href="https://docusaurus.io">Docusaurus</a> and React is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a>. React has created JSX, a syntax extension to JavaScript. JSX is not part of the web programming languages troika. Browsers do not understand JSX. React created a compiler to transform JSX code into standard JavaScript at build time.</p>
+<p>JSX (JavaScript XML), is a React syntax extension to the JavaScript language. It is similar to a template language, but it has full power of JavaScript. It is similar in appearance to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>, JSX provides a way to structure component rendering using syntax familiar to many developers. React components are written using JSX.</p>
+<p>React embraces the fact that rendering logic is inherently coupled with other UI logic: how events are handled, how the state changes over time, and how the data is prepared for display.
+Instead of artificially separating technologies by putting markup and logic in separate files, React separates concerns with cohesive components that contain both.</p>
+<hr />
+<h2 id="mdx"><a class="header" href="#mdx">MDX</a></h2>
+<img src="mdxLogo.png" height={50} width={100} />
+<p><a href="https://mdxjs.com/">MDX</a> is Markdown for the component era. It enables seamlessly writing JSX in Markdown documents. It is compiled to JSX components, It enables using Markdown’s terse syntax for writing website media, and JSX for components.</p>
+<p>Markdown is a faster way of creating and maintaining website material. It is a HTLM abstraction that is compiled to web standard <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></p>
+<p>John Gruber published the original Markdown Syntax Guide. Different flavors of Markdown have evolved since then.</p>
+<blockquote>
+<p>&quot;Markdown is a better way to write HTML. It is compiled into HTML at deploy time. Markdown is a lightweight plaintext markup language used to add formatting elements to documents. Markdown is now one of the world’s popular markup languages. Using Markdown is different from using a WYSIWYG editor. In an application like Microsoft Word, you click buttons to format words and phrases, and the changes are visible immediately. Markdown is not like that. In a Markdown-formatted file. Markdown syntax is added to the text to indicate which words and phrases look different.&quot;</p>
+</blockquote>
+<p>Markdown has been characterized by an informal specification and a reference implementation for conversion to HTML. Over time, many Markdown implementations have appeared. They are driven by the need for additional features like tables, footnotes, definition lists, and HTML inside Markdown blocks. The behavior of additional features diverge from the reference implementation and informal specification, and have attracted attention. Not all flavors of Markdown are compatible or supported by all frameworks.</p>
+<p>I'm hesitant creating website material without using a version of Markdown. My preference is using MDX.</p>
+<blockquote>
+<p>❤️ Powerful: MDX blends markdown and JSX syntax to fit perfectly in React/JSX-based projects.</p>
+<p>💻 Everything is a component: Use existing components inside MDX file and import other MDX files as plain components.</p>
+<p>🔧 Customizable: Decide which component is rendered for each markdown element.</p>
+<p>📚 Markdown-based: The simplicity and elegance of markdown remains, JSX is interleaved when you want to.</p>
+<p>🔥 Blazingly blazing fast: MDX has no runtime, all compilation occurs during the build stage.&quot;</p>
+</blockquote>
+<hr />
+<div style="break-before: page; page-break-before: always;"></div><h1 id="workstations"><a class="header" href="#workstations">Workstations</a></h1>
+<blockquote>
+<p>The key hardware for website developers are workstations</p>
+</blockquote>
+<hr />
+<p>Web site development is not easy, time consuming, and expensive. Optimizing the web development environment is critical.</p>
+<p>The key hardware for web developers are workstations. They need to be fast, reliable, supportable, secure, support large screens, and work with web software development applications</p>
+<p>The contemporary choice for web development workstations are Apple, Linux, and Microsoft. I have experience building websites with purchased and building bare metal Linux systems and bare metal Microsoft systems. I use apple products for exploring Internet technologies and creating web sites.</p>
+<p>Traditionally companies built workstation products with Intel processors. They are diversifying their product line with <a href="https://en.wikipedia.org/wiki/ARM_architecture">ARM-based</a> processors</p>
+<hr />
+<div style="break-before: page; page-break-before: always;"></div><h1 id="apple"><a class="header" href="#apple">Apple</a></h1>
+<hr />
+<img src="AppleLogo.png" height=200 width=200 />
+<p><a href="https://www.apple.com">Apple</a> is a computer manufacturing company delivering workstation products with Apple developed macOS certified UNIX operating systems.</p>
+<p>Apple recently released the first Mac products built with the ARM-based, Apple silicon designed, processors, and the macOS Big Sur operating system engineered to use <a href="https://en.wikipedia.org/wiki/Apple_M1">M1</a> chip capabilities.</p>
+<p>The last Apple processor transition was the Motorola 68000 to the Intel x86. It took time for Apple vendors and users to update their hardware and software to run on the x86. Apple created the Rosetta translation application that ran Motorola 68000 binary code on x86 machines. The M1 translation layer Rosetta 2, is about 80% the speed of the of native Apple Silicon code. The single-core Rosetta 2 benchmark running on a low end M1 MacBook Air with 8GB of RAM, is faster than other x86 Mac machines in single core benchmark. The M1 MacBook Air running native is faster than any competitors top of the line x86 machine, except for a couple.</p>
+<p>Apple products prices may be higher than their competitors. It is mitigated by the quality of hardware and software, robustness, security, and vendor support.</p>
+<p>Any unnecessary web developer workstation downtime is expensive. The advantages of Apple products are robustness, reliability, security, speed, vendor hardware and software support, and relative ease to use. Apple has responsibility for maintaining hardware and software products from sale to retirement. Apple Stores and other services are equipped to diagnose and repair Apple products.</p>
+<p>Operating systems updates have been free for years, and Apple continues to have the highest customer satisfaction in the industry.</p>
+<hr />
+<div style="break-before: page; page-break-before: always;"></div><h1 id="linux"><a class="header" href="#linux">Linux</a></h1>
+<hr />
+<img src="LinuxLogo.png" height=200 width=200 />
+<p><a href="https://www.linux.org/">Linux</a> is an examples of free and open-source software collaboration. The source code may be used, modified and distributed commercially or non-commercially by anyone under the terms of its respective licenses</p>
+<p>Linux is the leading operating system on web servers. Its greatest success in the consumer market is mobile device. Android being one of the dominant smartphones Linux-based operating system</p>
+<p>There are a some Linux vendor supported hardware platforms or Linux software distributions. The diversity of Linux distributions means that not all software or hardware runs all distributions or applications. Software and software repositories may be specific to a particular distribution</p>
+<p>Not all peripheral device vendors support Linux. The Linux open-source community supplies several missing device drivers.</p>
+<p>The price of Linux-based systems is attractive. The operating system software is free. Ready-made hardware platforms are available, or can be bare metal built by choosing hardware and software components, and having the skills to assemble and maintain them.</p>
+<p>The robustness, reliability, security, and speed of Linux systems varies from low to high, depending on the knowledge and skills of the vendors, builders and maintainers</p>
+<p>Responsibility for maintaining Linux workstation hardware, operating systems, and device drivers is fragmented or doesn't exist, except from the vendors, builders and maintainers</p>
+<p>There are computer repair services that are equipped to diagnosed and repaired Linux systems, but not to the extent of Apple Stores</p>
+<hr />
+<div style="break-before: page; page-break-before: always;"></div><h1 id="microsoft"><a class="header" href="#microsoft">Microsoft</a></h1>
+<hr />
+<img src="MicrosoftLogo.png" height=200 width=200 />
+<p><a href="https://www.microsoft.com/en-us/">Microsoft</a> is primerly a software development company. Microsoft <em>Windows</em> is a proprietary graphical operating system developed and marketed by Microsoft. Windows is the most used operating system on servers, personal computers desktops, laptops, and game consoles. Microsoft also manufactures Surface laptops and Xbox.</p>
+<p>Many companies sell hardware platforms with Microsoft Windows installed. Many peripheral device vendors support Windows drivers.</p>
+<p>Consumer versions of Windows were originally designed for ease-of-use on a single-user PC without a network connection, and did not have security features built in from the outset. Windows updates are regularly improving security.</p>
+<p>Windows is one of hackers prime data hunting grounds, even with frequent security updates. Windows systems are everywhere and stores or has access to vast amounts of data. There are Windows installations that do not keep Windows updated. One reason may be issues with updates. Microsoft Windows update problem 2021 are recent examples.</p>
+<p>The reliability, robustness, security, and supportability of Microsoft systems varies from low to high, depending on the knowledge and skills of vendors, builders and maintainers. The combinations and permutations of vendor hardware platforms, software applications, and peripheral vendors and device support, may be contributing to Microsoft Windows update problems.</p>
+<p>There are computer repair services that are equipped to diagnosed and repaired Windows systems, but not to the extent of Apple Stores.</p>
+<hr />
+<div style="break-before: page; page-break-before: always;"></div><h1 id="programming"><a class="header" href="#programming">Programming</a></h1>
+<hr />
+<h2 id="languages"><a class="header" href="#languages">Languages</a></h2>
+<p>The troika of <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>, and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a> website programming languages have become standard for creating website pages, They are interpreted and rendered by web browsers.</p>
+<blockquote>
+<p>The job of a website development frameworks is to compile the troika and non troika programming languages, such as MDX and JSX,  into a combination the standard troika languages to be executed in web browsers.</p>
+</blockquote>
+<hr />
+<h2 id="hypertext-markup-language-html"><a class="header" href="#hypertext-markup-language-html">Hypertext Markup Language (HTML)</a></h2>
+<img src="HTML5logo.png" height=100 width=100 />
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> is used to create websites. It is the standard markup language for browser website pages. It defines the content and structure of website pages. HTML  can be assisted by  Cascading Style Sheets (<a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>) to instruct browsers how elements are to be styled and rendered, and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a> is for user interactivity.</p>
+<hr />
+<h2 id="javascript"><a class="header" href="#javascript">JavaScript</a></h2>
+<blockquote>
+<p>Not to be confused with the <a href="https://www.java.com/en/download/help/whatis_java.html">Java</a> programming language.</p>
+</blockquote>
+<p><img src="JavaScript.png" height=100 width=100 /> /&gt;</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a> Used to make webpages interactive. It is the programming language of the web. It is the most popular website programming language choice for the million of programmers globally. It is a high-level language, flexible and expressive enough to write website applications. It has many advantages. It is dynamically typed, requires no compile step, and has a huge ecosystem that provides powerful frameworks, libraries, and other tools. JavaScript is one of the core technologies of website <a href="http://localhost:3000/docs/programming#languages">troika</a> website programming. It enables interactive web pages and is an essential part of web applications. All contemporary web browsers have a dedicated JavaScript virtual machine built-inn to execute it.</p>
+<hr />
+<h2 id="css"><a class="header" href="#css">CSS</a></h2>
+<p><img src="CSS3logo.png" height=100 width=100 /> /&gt;</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document written in <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></p>
+<p>CSS instructs browsers how elements are to be styled and rendered.</p>
+<hr />
+<h2 id="jsx"><a class="header" href="#jsx">JSX</a></h2>
+<p><img src="jsxlogo.png" height=100 width=100 /> /&gt;</p>
+<p><a href="https://reactjs.org/docs/introducing-jsx.html#Next.js-focus-wrapper">JSX</a> (JavaScript eXtended) is a statically-typed syntax extension to JavaScript. It enables writing <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> in JavaScript. JSX converts HTML tags into React elements. It is compiled to JavaScript.</p>
+<hr />
+<h2 id="mdx-1"><a class="header" href="#mdx-1">MDX</a></h2>
+<img src="mdxLogo.png" height=50 width=100 />
+<p><a href="https://mdxjs.com/">MDX</a> is Markdown for the component era. It enables seamlessly writing JSX in Markdown documents. It is compiled to JSX components, It enables using Markdown’s terse syntax for writing website media, and JSX for components.</p>
+<p>Markdown is a faster way of creating and maintaining website material. It is a HTLM abstraction that is compiled to web standard <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></p>
+<p>John Gruber published the original Markdown Syntax Guide. Different flavors of Markdown have evolved since then.</p>
+<blockquote>
+<p>&quot;Markdown is a better way to write HTML. It is compiled into HTML at deploy time. Markdown is a lightweight plaintext markup language used to add formatting elements to documents. Markdown is now one of the world’s popular markup languages. Using Markdown is different from using a WYSIWYG editor. In an application like Microsoft Word, you click buttons to format words and phrases, and the changes are visible immediately. Markdown is not like that. In a Markdown-formatted file. Markdown syntax is added to the text to indicate which words and phrases look different.&quot;</p>
+</blockquote>
+<p>Markdown has been characterized by an informal specification and a reference implementation for conversion to HTML. Over time, many Markdown implementations have appeared. They are driven by the need for additional features like tables, footnotes, definition lists, and HTML inside Markdown blocks. The behavior of additional features diverge from the reference implementation and informal specification, and have attracted attention. Not all flavors of Markdown are compatible or supported by all frameworks.</p>
+<p>I'm hesitant creating website material without using a version of Markdown. My preference is using MDX.</p>
+<hr />
+<div style="break-before: page; page-break-before: always;"></div><h1 id="company"><a class="header" href="#company">Company</a></h1>
+<blockquote>
+<p><em>JohnTelford.com LLC</em> is a  technology consulting company working with client  development projects for more that 30 years. I am the sole proprietor of the company.</p>
+</blockquote>
+<h2 id="nuggets"><a class="header" href="#nuggets">Nuggets</a></h2>
+<p>Way back when the Internet web browsers and programming languages came along, I became interested in web technologies, and began learn by doing technology deep dives. I have years of learning ever changing Electronics, Internet, and Software technologies by hands-on experiencing the technologies du jour.</p>
+<p>I have a passion pursuing what’s new and improved with these industries. Checking out what’s new or not, a pipe dream or not, or what’s new and improved, is like panning for gold. Buried within the mountains of info rubble produced daily, every so often one finds interesting technology nuggets making the effort worthwhile. I use the <a href="hypecycle.html">Hype Cycle</a> as a guide.</p>
+<p>I am an Electronics and Software Engineer specializing in website hardware and software technology disciplines:</p>
+<ul>
+<li>Architecture</li>
+<li>Development</li>
+<li>Deployment</li>
+</ul>
+<hr />
+<div style="break-before: page; page-break-before: always;"></div><h1 id="contact"><a class="header" href="#contact">Contact</a></h1>
+<hr />
+<p>A labyrinth symbolizes possible difficulties reaching website project goals. Knowledge and experience with web technology disciplines may be helpful.</p>
+<img src="mugShot.png" height=80 width=100/>
+<p>John Telford<br />
+Portland, Oregon<br />
+JohnTelford.com LLC</p>
+<p>phone:text 503-312-7248</p>
+<p><a href="mailto:john@johntelford.com">Email</a></p>
+<hr />
+<div style="break-before: page; page-break-before: always;"></div><h1 id="hype-cycle"><a class="header" href="#hype-cycle">Hype Cycle</a></h1>
+<hr />
+<p>The Hype Cycle helps separate reality from fiction.</p>
+<hr />
+<img src="hypecycle.png" height=250 width=500 />
+<hr />
+<p><strong>Hype Cycle</strong></p>
+<h2 id="points-of-interest"><a class="header" href="#points-of-interest">Points of Interest</a></h2>
+<p>The Hype Cycle points of interest are:</p>
+<p><strong>Technology Trigger</strong><br />
+A potential technology breakthrough happens.</p>
+<p><strong>Peak of Inflated Expectations</strong><br />
+Early publicity produces a number of success stories and often accompanied by stories of failures. Some companies may take corrective action but most don’t.</p>
+<p><strong>Trough of Disillusionment</strong><br />
+Interest wanes as experiments and implementations fail to deliver on the hype.</p>
+<p><strong>Slope of Enlightenment</strong><br />
+Technology consumers begin to understand the technology better and how it may benefit them.</p>
+<p><strong>Plateau of Productivity</strong><br />
+Mainstream adoption starts to take off. Some technologies making it to the Plateau of Productivity may be doomed to the spiral of death by inattention to details of keeping products alive.</p>
+<hr />
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </body>
+</html>
