@@ -2,7 +2,7 @@
 
 > ***Caution***
 > 
-> Work in progress - v 0.1.2 d2 TEST 
+> Work in progress - v 0.1.2 d2 TEST it
 > 
 > Jan 24, 2022
 
