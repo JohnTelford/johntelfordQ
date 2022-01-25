@@ -2,9 +2,9 @@
 
 > ***Caution***
 > 
-> Work in progress - v 0.1.3 main
+> Work in progress - v 0.1.3 main test
 > 
-> Jan 24, 2022mdbook 
+> Jan 24, 2022
 
 ---
 
