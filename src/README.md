@@ -2,9 +2,9 @@
 
 > ***Caution***
 > 
-> Work in progress - v 0.1.2 dmain TEST 
+> Work in progress - v 0.1.2 
 > 
-> Jan 20, 2022
+> Jan 24, 2022
 
 ---
 
