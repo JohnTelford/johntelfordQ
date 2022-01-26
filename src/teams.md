@@ -7,8 +7,7 @@
 
 This website discusses optimizing website project life time costs. It describes a framework for developing and deploying websites. It is based on _Iterative Development_ and _web component technologies_.
 
-<img src="
-" height=400 width=400 />
+<img src="iterativedev.png" height=400 width=400 />
 
 **Iterative Development Teams**
 
