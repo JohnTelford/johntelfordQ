@@ -45,8 +45,6 @@ This website discusses optimizing website project life time costs. It describes 
 
 <img src="iterativedev.png" height=400 width=400 />
 
-![Iterative website development](iterativedev.png)
-
 **Iterative website development**
 
 ---
