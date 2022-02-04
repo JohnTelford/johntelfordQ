@@ -53,3 +53,4 @@
 
 	- [Hype Cycle](hypecycle.md)
 
+[Blog](blog.md)
