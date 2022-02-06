@@ -1,3 +1,3 @@
 # Blog
 
-[Tech Talk John Blog](https://johntelfordcom.blogspot.com)
+Click to view [Tech Talk John Blog](https://techtalkjohnblog.pages.dev/)

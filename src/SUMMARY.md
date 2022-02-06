@@ -1,16 +1,10 @@
 # Summary
 
-# Introduction
+[Introduction](README.md)
 
-- [Introduction](README.md)
+[Navigate](reading.md) 
 
-# Navigating Website
-
-- [Navigate](reading.md) 
-
-# Overview
-
-- [Overview](overview.md)
+[Overview](overview.md)
 
 # Teams
 
@@ -53,4 +47,6 @@
 
 	- [Hype Cycle](hypecycle.md)
 
+
 [Blog](blog.md)
+  
