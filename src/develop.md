@@ -125,7 +125,7 @@ With Visual Studio Code](https://yourbrainoncomputers.com/using-git-with-visual-
 
 - The `mdBook serve` command renders project file edits in a browser. If viewing the page being edited, it will be updated in near real time.
 
-- The next step is to commit file changes. The `VScode` `git` works with GitHub to update the  central repository with the local repository file changes.
+- The next step is to commit file changes. The `VScode` `git` works with GitHub to update the  central repository with the local repository file changes.
 
 - `Cloudflare` is notified by GitHub when the project central and deploys a website.
 
