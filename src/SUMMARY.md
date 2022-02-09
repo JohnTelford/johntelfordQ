@@ -48,4 +48,7 @@
 
 
 [Blog](blog.md)
+
+
+[Colophon](colophon.md)
   
