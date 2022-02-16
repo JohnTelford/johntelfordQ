@@ -1,7 +1,7 @@
 # Overview
 
 
->This website discusses optimizing website project life time costs. It describes a framework for developing and deploying websites. It is based on *Iterative Development* and *Web Component Technologies*.
+>This website discusses optimizing website project life time costs. It describes a site generator for developing and deploying websites. It is based on *Iterative Development* and *Web Component Technologies*.
 >
 >The basic idea behind *Iterative Development* is to develop a system through repeated cycles (iterative) and in smaller portions at a time (incremental), allowing iterative development teams to take advantage of what was learned during development of earlier parts or versions of the system. 
 >
@@ -69,7 +69,7 @@ Content and software defects cost less when found early, as this chart shows:
 
 ---
 
-Some of the early defect detection mechanisms built into the framework are:
+Some of the early defect detection mechanisms built into the site generator are:
 
 - `vscode` editor tool extensions continually check for syntax and other errors
 - Fast refresh live-editing quickly show changes while typing, and any runtime errors

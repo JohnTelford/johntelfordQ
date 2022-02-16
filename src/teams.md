@@ -1,11 +1,11 @@
 # Iterative Development Teams
 
->Teams work together delivering their work to other teams for the life time of website.
+>Teams work together delivering their work to other teams during the life time of website.
 >
 >The slightest errors or security issues will require remediations sometime during the life time of the website.
 
 
-This website discusses optimizing website project life time costs. It describes a framework for developing and deploying websites. It is based on _Iterative Development_ and _web component technologies_.
+This website discusses optimizing website project life time costs. It describes a site generator for developing and deploying websites. It is based on _Iterative Development_ and _web component technologies_.
 
 <img src="iterativedev.png" height=400 width=400 />
 
@@ -27,18 +27,20 @@ The _Design_ team prerequisites are making decisions about Website Design, Consi
 
 ### Develop
 
-The _Develop_ team prerequisites are making decisions about resources required to transform the _Define_ and _Design_ work into a website, and infrastructure. This includes Development Framework and programming tools.
+The _Develop_ team prerequisites are making decisions about resources required to transform the _Define_ and _Design_ work into a website, and infrastructure. This includes site generator and programming tools.
 
 ### Deploy
 
 The _Deploy_ team prerequisites are:
 
-: Making decisions about what resources are required for deploying production version of the website to the Internet.
+Making decisions about what resources are required for deploying production version of the website to the Internet.
 
-: Making decisions about what resources are required for team developers working on features, fixes, or testing to deploy private Internet websites with their changes, without disturbing other developers work or the production version.
+Making decisions about what resources are required for team developers working on features, fixes, or testing to deploy private Internet websites with their changes, without disturbing other developers work or the production version.
 
 ### Maintain
 
-The _Maintain_ team prerequisites are making decisions about remediating _Define_, _Design_,_Develop_, _Deploy_, or _Security_ defects.
+The *Maintain* team prerequisites are making decisions about remediating *Define*, *Design*,*Develop*, *Deploy*, or *Security* defects.
+
+Remediating defects members from the other teams may be part of he *Maintain* team.
 
 ---
