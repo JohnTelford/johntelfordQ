@@ -144,7 +144,7 @@
                     <main>
                         <h1 id="overview"><a class="header" href="#overview">Overview</a></h1>
 <blockquote>
-<p>This website discusses optimizing website project life time costs. It describes a site generator for developing and deploying websites. It is based on <em>Iterative Development</em> and <em>Web Component Technologies</em>.</p>
+<p>This website discusses optimizing website project life time costs. It describes using a site generator for developing and deploying websites. It is based on <em>Iterative Development</em> and <em>Web Component Technologies</em>.</p>
 <p>The basic idea behind <em>Iterative Development</em> is to develop a system through repeated cycles (iterative) and in smaller portions at a time (incremental), allowing iterative development teams to take advantage of what was learned during development of earlier parts or versions of the system. </p>
 <p><em>Web Component Technologies</em> enable creating reusable custom elements, with their functionality encapsulated away from the rest of the code, and utilized in website development.</p>
 <p>Iterative web development teams working together can help optimizing website costs and lower some the difficulties creating websites.</p>
@@ -153,39 +153,37 @@
 <h2 id="difficulties"><a class="header" href="#difficulties">Difficulties</a></h2>
 <p>Creating and maintaining websites that meet users needs are difficult, complex, time consuming.</p>
 <p>Website life time cost will be higher if defects are not mitigated early.</p>
-<h2 id="slow"><a class="header" href="#slow">Slow</a></h2>
+<h3 id="slow"><a class="header" href="#slow">Slow</a></h3>
 <p>More than half of mobile user will leave a page that takes longer than 3 seconds to load and may never return. Optimizing websites to maximize performance is important.</p>
-<h2 id="content"><a class="header" href="#content">Content</a></h2>
+<h3 id="content"><a class="header" href="#content">Content</a></h3>
 <p>Most People visit websites for content. They have little interest in how the content is created or how it gets to their screen. Most access websites using mobile devices. Everyone wants websites pages to load quick and pages that conform to their screen size. The website look and feel, users experience, functionality, also needs to be consistent and complement the content.</p>
 <p>The Google <a href="https://pagespeed.web.dev/">PageSpeed Insights</a> website reports on the performance of a website page on both mobile and desktop devices, and provides suggestions on how pages may be improved.</p>
 <p>Google reports mobile website pages load within 22 seconds on average. However, 53 percent of mobile users will leave a page that takes longer than 3 seconds to load.</p>
 <hr />
 <h2 id="iterative-development-teams"><a class="header" href="#iterative-development-teams">Iterative Development Teams</a></h2>
-<p>Teams work together delivering their work to other teams for the life time of website.</p>
+<p>Teams work together delivering their work to other teams during the website life time.</p>
 <p>The slightest errors or security issues will require remediations sometime during the life time of the website.</p>
-<p>This website discusses optimizing website project life time costs. It describes a framework for developing and deploying websites. It is based on <em>Iterative Development</em> and <em>web component technologies</em>.</p>
+<p>This website discusses optimizing website project life time costs. It describes using a site generator for developing and deploying websites. It is based on <em>Iterative Development</em> and <em>web component technologies</em>.</p>
 <hr />
 <img src="iterativedev.png" height=400 width=400 />
-<p><strong>Iterative website development</strong></p>
-<hr />
-<p>Iterative website development enables the <em>Define, Design, Develop, Deploy and Maintain</em> teams to be operational at the same time, including testing and remediating defects.</p>
+<p><strong>Iterative website development Teams</strong></p>
+<p>Iterative website development enables the <em>Define, Design, Develop, Deploy and Maintain</em> teams to be operational at the same time creating and testing functionality, and remediating defects.</p>
 <hr />
 <h2 id="defect-remediation-costs"><a class="header" href="#defect-remediation-costs">Defect Remediation Costs</a></h2>
-<p>It is possible that the highest cost over the life time of a website project may be remediating defects.</p>
+<p>Probably the highest cost over the life time of website projects may be remediating defects.</p>
 <p>Content and software defects cost less when found early, as this chart shows:</p>
-<hr />
 <img src="bugFixChart.jpg" height= 400 width=400 />
 <p><strong>Defect Remediation Costs</strong></p>
-<hr />
-<p>Some of the early defect detection mechanisms built into the site generator are:</p>
+<p>Some of the early defect detection mechanisms built into  using a site generator are:</p>
 <ul>
 <li><code>vscode</code> editor tool extensions continually check for syntax and other errors</li>
 <li>Fast refresh live-editing quickly show changes while typing, and any runtime errors</li>
-<li>Team members may frequently deploy their copy of the project repository with their changes to private websites where stakeholders can see them and give feedback.</li>
+<li>Team members frequently deploying their copy of the project repository with their changes, to private websites where stakeholders can see them and give feedback.</li>
 </ul>
 <hr />
 <h2 id="minimum-viable-product"><a class="header" href="#minimum-viable-product">Minimum Viable Product</a></h2>
-<p>The first goal of website development project is get to a <em>Minimum Viable Product</em>. It is a way to understand whether the website project idea will work or not. It is a stage in website development where the <em>must</em> features are implemented and ready to test with end-users. It gives feedback about the positive aspects and shortcomings.</p>
+<p>The first goal of website development projects is get to a <em>Minimum Viable Product</em>. </p>
+<p>It is a way to understand whether the website project idea will work or not. It is a stage in website development where the <em>must</em> features are implemented and ready to test with end-users. It gives feedback about the positive aspects and shortcomings.</p>
 <p>The next steps are adding the <em>want</em> features, until stakeholders agree the website is production quality and ready to be deployed.</p>
 <hr />
 
@@ -218,6 +216,20 @@
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 

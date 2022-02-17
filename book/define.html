@@ -145,10 +145,19 @@
                         <h1 id="define-team"><a class="header" href="#define-team">Define Team</a></h1>
 <blockquote>
 <p>Defining websites helps the <em>Iterative Development</em> teams and stakeholders to understand the project.</p>
-<p><em>Define</em> website prerequisites is the first steps in optimizing website costs.</p>
+<p>Defining website prerequisites is the first steps in optimizing website costs.</p>
 </blockquote>
-<h3 id="prerequisites"><a class="header" href="#prerequisites">Prerequisites</a></h3>
-<p>Websites Define prerequisites are what the project is about, including <em>Purpose, Project Funding, Website Type, Stakeholders, Musts and Wants Functionality, Website Media, and Security</em></p>
+<h2 id="prerequisites"><a class="header" href="#prerequisites">Prerequisites</a></h2>
+<p>Websites Define prerequisites are what the project is about, including:</p>
+<ul>
+<li>Purpose</li>
+<li>Project Funding</li>
+<li>Website Type</li>
+<li>Stakeholders</li>
+<li>The <em>Musts</em> and <em>Wants</em> Functionality</li>
+<li>Website Media</li>
+<li>Security</li>
+</ul>
 <h3 id="purpose"><a class="header" href="#purpose">Purpose</a></h3>
 <p>Knowing the purpose of the website project enables <em>Iterative Development</em> teams to separate goals into musts and wants</p>
 <h3 id="project-funding"><a class="header" href="#project-funding">Project Funding</a></h3>
@@ -161,16 +170,30 @@
 <li>Something else ?</li>
 </ul>
 <h3 id="stakeholders"><a class="header" href="#stakeholders">Stakeholders</a></h3>
-<p>The <em>Iterative Development</em> teams deploy private websites for stakeholders review while creating new, updating, fixing, or exploring new features.</p>
 <p>Who are the stakeholders?</p>
+<p>The <em>Iterative Development</em> teams deploy private websites for stakeholders review while creating new, updating, fixing, or exploring new features.</p>
 <h3 id="musts-and-wants-functionality"><a class="header" href="#musts-and-wants-functionality">Musts and Wants Functionality</a></h3>
-<p>When steakholders agree the website <em>Musts</em> functionalities are operational, then it is a <a href="/docs/overview/#minimum-viable-product">Minimum Viable Product</a> and ready for testing.</p>
-<p>When steakholders agree the website <em>Wants</em> functionalities are operational, the website is production quality and ready to be deployed to the Internet.</p>
+<ul>
+<li>
+<p>When stakeholders agree the website <em>Musts</em> functionalities are operational, then it is a <a href="/docs/overview/#minimum-viable-product">Minimum Viable Product</a> and ready for testing.</p>
+</li>
+<li>
+<p>When stakeholders agree the website <em>Wants</em> functionalities are operational, the website is production quality and ready to be deployed to the Internet.</p>
+</li>
+</ul>
 <h3 id="website-media"><a class="header" href="#website-media">Website Media</a></h3>
+<ul>
+<li>
 <p>What is the website message ?</p>
+</li>
+<li>
 <p>What existing and new website media will be in website pages?</p>
+</li>
+</ul>
 <h3 id="security"><a class="header" href="#security">Security</a></h3>
-<p>What are the website security needs?</p>
+<ul>
+<li>What are the website security needs?</li>
+</ul>
 <hr />
 
                     </main>
@@ -202,6 +225,20 @@
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 

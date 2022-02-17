@@ -1,10 +1,16 @@
 ## Develop Team
 
->_Develop_ is translating _Define_ and _Design_ processes into website pages using abstract logical structures, rigid nonhuman website programming languages, and a variety of tools. The slightest errors or security issues will require remediation sometime during the life time of the website.
+>The _Develop_ team translates the _Define_ and _Design_ processes into website pages using abstract logical structures, rigid nonhuman website programming languages, and a variety of tools. The slightest errors or security issues will require remediation sometime during the life time of the website.
 
 ### Prerequisites
 
-The Develop team prerequisites are making decisions about resources required to transform the _Define_ and _Design_ work into a website, and infrastructure. This includes development [framework](https://docusaurus.io/docs#comparison-with-other-tools) and programming tools.
+The Develop team prerequisites are making decisions about resources required to transform the _Define_ and _Design_ work into a website, and infrastructure. This includes the site generator 
+
+# TODO
+
+Use blog site generator link
+
+[framework](https://docusaurus.io/docs#comparison-with-other-tools) and programming tools.
 
 ---
 

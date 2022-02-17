@@ -11,17 +11,26 @@ The core foundations of a  user's website experience are:
 > 
 > - **Integrated** - The website uses the full  capabilities of the user device to create an experience true to the device.
 > 
-> - **Reliable** - Load instantly and reliably even in  uncertain network conditions.
+> - **Reliable** - Loads quickly and reliably even in  uncertain network conditions.
 > 
-> - **Engaging** - Keeps the user coming back to the app  that designed to look and feel natural.
+> - **Engaging** - Keeps user coming back to a website that is designed to look and feel natural.
 
 
 ---
 ## Prerequisites
 
-Website design prerequisites are making decisions about , Responsive Website Design, Consistency, Theme, Color Scheme, Typology, Navigation, and User Interaction.
+Website design prerequisites are making decisions about:
+- Responsive Website Design
+- Consistency
+- Theme
+- Color Scheme
+- Typology
+- Navigation
+- User Interaction
 
+<!--
 I have reincarnated JohnTelford.com using several of these and other [Development Frameworks](https://docusaurus.io/docs#comparison-with-other-tools). The last two reincarnations have been:
+
 
 ### Docusaurus
 
@@ -42,33 +51,32 @@ This website is Brochureware. I found it was faster, cleaner, and less complicat
 
 I recommend using `Docusaurus` for a more complex user interface and material because it abstracts `react` so one can use `mdx` and `jsx`.
 
+-->
 ---
 
 ## Responsive Website Design
 
 The majority of users access websites using mobile devices. They and others have little tolerance for slow loading website pages or pages that do not conform to their screen size.
 
-Website design ensures pages load quickly and adjust to display size. Website pages are display correctly on a variety of devices and window or screen size. The website look and feel, users experience, and functionality maintain consistency.
+- Website design   
+	- Ensures pages load quickly
+	- Website pages are display correctly on a variety of devices and window or screen size
+	- The website look and feel, users experience, and functionality are consistenly maintain.
 
----
-
-### Consistency
-
+- Consistency    
 Website consistency is the look and feel of the site. The users experience, and functionality does not vary between website pages.
 
 ---
 
-### Theme
+## Theme
 
-The website theme is the Color Scheme, Typology, Navigation, and User Interface.
+The website theme is:
 
 - Color scheme
-
-  - Header
-  - Website page
-  - Fonts
-  - Footer
-
+- Header
+- Pages
+- Fonts
+- Footer
 - Typology
 - Navigation
 - User interaction

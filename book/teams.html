@@ -144,28 +144,49 @@
                     <main>
                         <h1 id="iterative-development-teams"><a class="header" href="#iterative-development-teams">Iterative Development Teams</a></h1>
 <blockquote>
-<p>Teams work together delivering their work to other teams during the life time of website.</p>
+<p>Teams work together delivering their work to other teams during the life time of the website.</p>
 <p>The slightest errors or security issues will require remediations sometime during the life time of the website.</p>
 </blockquote>
-<p>This website discusses optimizing website project life time costs. It describes a site generator for developing and deploying websites. It is based on <em>Iterative Development</em> and <em>web component technologies</em>.</p>
+<p>This website discusses optimizing website project life time costs. It describes using a site generator for developing and deploying websites. It is based on <em>Iterative Development</em> and <em>web component technologies</em>.</p>
 <img src="iterativedev.png" height=400 width=400 />
 <p><strong>Iterative Development Teams</strong></p>
-<p>Iterative website development enables the <em>Define, Design, Develop, Deploy and Maintain</em> teams to be operational at the same time, including testing and remediating defects.</p>
+<p>Iterative website development enables the <em>Define, Design, Develop, Deploy and Maintain</em> teams to be operational at the same time creating, testing website and remediating defects.</p>
 <hr />
 <h2 id="teams-prerequisites"><a class="header" href="#teams-prerequisites">Teams Prerequisites</a></h2>
 <h3 id="define"><a class="header" href="#define">Define</a></h3>
-<p>The <em>Define</em> team prerequisites are defining what the project is about, funding, purpose, functionality, stakeholders, content, <em>must</em> and <em>want</em> features, and security.</p>
+<p>The <em>Define</em> team prerequisites are defining what the project is about, funding, purpose, functionality, stakeholders, content, <em>must</em> and <em>want</em> features, and <em>security</em>.</p>
 <h3 id="design"><a class="header" href="#design">Design</a></h3>
 <p>The <em>Design</em> team prerequisites are making decisions about Website Design, Consistency, Theme, Color Scheme, Typology, Navigation, and User Interaction.</p>
 <h3 id="develop"><a class="header" href="#develop">Develop</a></h3>
-<p>The <em>Develop</em> team prerequisites are making decisions about resources required to transform the <em>Define</em> and <em>Design</em> work into a website, and infrastructure. This includes site generator and programming tools.</p>
+<p>The <em>Develop</em> team prerequisites are:</p>
+<ul>
+<li>
+<p>Making decisions about resources required to transform the <em>Define</em> and <em>Design</em> work into a website, and infrastructure. </p>
+</li>
+<li>
+<p>Making decisions about using a site generator and programming tools.</p>
+</li>
+</ul>
 <h3 id="deploy"><a class="header" href="#deploy">Deploy</a></h3>
-<p>The <em>Deploy</em> team prerequisites are:</p>
-<p>Making decisions about what resources are required for deploying production version of the website to the Internet.</p>
-<p>Making decisions about what resources are required for team developers working on features, fixes, or testing to deploy private Internet websites with their changes, without disturbing other developers work or the production version.</p>
+<p>The <em>Deploy</em> team prerequisites are: </p>
+<ul>
+<li>
+<p>Making decisions about resources required for deploying production version of the website to the Internet.</p>
+</li>
+<li>
+<p>Making decisions about resources are required for team developers working on features, fixes, or testing to deploy private Internet websites with their changes, without disturbing other developers work or the production version.</p>
+</li>
+</ul>
 <h3 id="maintain"><a class="header" href="#maintain">Maintain</a></h3>
-<p>The <em>Maintain</em> team prerequisites are making decisions about remediating <em>Define</em>, <em>Design</em>,<em>Develop</em>, <em>Deploy</em>, or <em>Security</em> defects.</p>
-<p>Remediating defects members from the other teams may be part of he <em>Maintain</em> team.</p>
+<p>The <em>Maintain</em> team prerequisites are: </p>
+<ul>
+<li>
+<p>Making decisions about remediating deployed websites <em>Define</em>, <em>Design</em>,<em>Develop</em>, <em>Deploy</em>, or <em>Security</em> defects.</p>
+</li>
+<li>
+<p>Organizing members from other teams to be part of the <em>Maintain</em> team while remediating specific defects.</p>
+</li>
+</ul>
 <hr />
 
                     </main>
@@ -197,6 +218,20 @@
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 

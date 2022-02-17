@@ -144,10 +144,13 @@
                     <main>
                         <h2 id="develop-team"><a class="header" href="#develop-team">Develop Team</a></h2>
 <blockquote>
-<p><em>Develop</em> is translating <em>Define</em> and <em>Design</em> processes into website pages using abstract logical structures, rigid nonhuman website programming languages, and a variety of tools. The slightest errors or security issues will require remediation sometime during the life time of the website.</p>
+<p>The <em>Develop</em> team translates the <em>Define</em> and <em>Design</em> processes into website pages using abstract logical structures, rigid nonhuman website programming languages, and a variety of tools. The slightest errors or security issues will require remediation sometime during the life time of the website.</p>
 </blockquote>
 <h3 id="prerequisites"><a class="header" href="#prerequisites">Prerequisites</a></h3>
-<p>The Develop team prerequisites are making decisions about resources required to transform the <em>Define</em> and <em>Design</em> work into a website, and infrastructure. This includes development <a href="https://docusaurus.io/docs#comparison-with-other-tools">framework</a> and programming tools.</p>
+<p>The Develop team prerequisites are making decisions about resources required to transform the <em>Define</em> and <em>Design</em> work into a website, and infrastructure. This includes the site generator </p>
+<h1 id="todo"><a class="header" href="#todo">TODO</a></h1>
+<p>Use blog site generator link</p>
+<p><a href="https://docusaurus.io/docs#comparison-with-other-tools">framework</a> and programming tools.</p>
 <hr />
 <h3 id="developer-iterative-development-stack"><a class="header" href="#developer-iterative-development-stack">Developer Iterative Development Stack</a></h3>
 <blockquote>
@@ -292,6 +295,20 @@ With Visual Studio Code</a> will guide you to installing and learning git, and i
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 

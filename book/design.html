@@ -157,55 +157,78 @@
 <p><strong>Integrated</strong> - The website uses the full  capabilities of the user device to create an experience true to the device.</p>
 </li>
 <li>
-<p><strong>Reliable</strong> - Load instantly and reliably even in  uncertain network conditions.</p>
+<p><strong>Reliable</strong> - Loads quickly and reliably even in  uncertain network conditions.</p>
 </li>
 <li>
-<p><strong>Engaging</strong> - Keeps the user coming back to the app  that designed to look and feel natural.</p>
+<p><strong>Engaging</strong> - Keeps user coming back to a website that is designed to look and feel natural.</p>
 </li>
 </ul>
 </blockquote>
 <hr />
 <h2 id="prerequisites"><a class="header" href="#prerequisites">Prerequisites</a></h2>
-<p>Website design prerequisites are making decisions about , Responsive Website Design, Consistency, Theme, Color Scheme, Typology, Navigation, and User Interaction.</p>
-<p>I have reincarnated JohnTelford.com using several of these and other <a href="https://docusaurus.io/docs#comparison-with-other-tools">Development Frameworks</a>. The last two reincarnations have been:</p>
-<h3 id="docusaurus"><a class="header" href="#docusaurus">Docusaurus</a></h3>
+<p>Website design prerequisites are making decisions about:</p>
+<ul>
+<li>Responsive Website Design</li>
+<li>Consistency</li>
+<li>Theme</li>
+<li>Color Scheme</li>
+<li>Typology</li>
+<li>Navigation</li>
+<li>User Interaction</li>
+</ul>
+<!--
+I have reincarnated JohnTelford.com using several of these and other [Development Frameworks](https://docusaurus.io/docs#comparison-with-other-tools). The last two reincarnations have been:
+
+
+### Docusaurus
+
 <img src= "docusauruslogo.png" height=100 width=100  />
-<p>The perquisites requirements for this website can be realized using the <a href="https://docusaurus.io">Docusaurus</a> development framework. Any of the Docusaurus attributes may be changes.</p>
-<p>The website design prerequisites can be realized using the Docusaurus development framework.</p>
-<h3 id="mdbook"><a class="header" href="#mdbook">mdbook</a></h3>
+
+  
+The perquisites requirements for this website can be realized using the [Docusaurus](https://docusaurus.io) development framework. Any of the Docusaurus attributes may be changes.
+
+The website design prerequisites can be realized using the Docusaurus development framework.
+
+### mdbook
+
 <img src= "markdownlogo.png" height=100 width=150 />
-<p>The <a href="https://crates.io/crates/mdbook">mdbook</a> uses <a href="https://www.markdownguide.org">markdown</a> with imbedded HTML. It does not abstract<code>React</code></p>
-<p>This website is Brochureware. I found it was faster, cleaner, and less complicated to create it using <code>mdbook</code>.</p>
-<p>I recommend using <code>Docusaurus</code> for a more complex user interface and material because it abstracts <code>react</code> so one can use <code>mdx</code> and <code>jsx</code>.</p>
+
+The [mdbook](https://crates.io/crates/mdbook) uses [markdown](https://www.markdownguide.org) with imbedded HTML. It does not abstract`React`
+
+This website is Brochureware. I found it was faster, cleaner, and less complicated to create it using `mdbook`.
+
+I recommend using `Docusaurus` for a more complex user interface and material because it abstracts `react` so one can use `mdx` and `jsx`.
+
+-->
 <hr />
 <h2 id="responsive-website-design"><a class="header" href="#responsive-website-design">Responsive Website Design</a></h2>
 <p>The majority of users access websites using mobile devices. They and others have little tolerance for slow loading website pages or pages that do not conform to their screen size.</p>
-<p>Website design ensures pages load quickly and adjust to display size. Website pages are display correctly on a variety of devices and window or screen size. The website look and feel, users experience, and functionality maintain consistency.</p>
-<hr />
-<h3 id="consistency"><a class="header" href="#consistency">Consistency</a></h3>
-<p>Website consistency is the look and feel of the site. The users experience, and functionality does not vary between website pages.</p>
-<hr />
-<h3 id="theme"><a class="header" href="#theme">Theme</a></h3>
-<p>The website theme is the Color Scheme, Typology, Navigation, and User Interface.</p>
 <ul>
 <li>
-<p>Color scheme</p>
+<p>Website design</p>
 <ul>
-<li>Header</li>
-<li>Website page</li>
-<li>Fonts</li>
-<li>Footer</li>
+<li>Ensures pages load quickly</li>
+<li>Website pages are display correctly on a variety of devices and window or screen size</li>
+<li>The website look and feel, users experience, and functionality are consistenly maintain.</li>
 </ul>
 </li>
 <li>
-<p>Typology</p>
+<p>Consistency<br />
+Website consistency is the look and feel of the site. The users experience, and functionality does not vary between website pages.</p>
 </li>
-<li>
-<p>Navigation</p>
-</li>
-<li>
-<p>User interaction</p>
-</li>
+</ul>
+<hr />
+<h2 id="theme"><a class="header" href="#theme">Theme</a></h2>
+<p>The website theme is:</p>
+<ul>
+<li>Color scheme</li>
+<li>Header</li>
+<li>Pages</li>
+<li>Fonts</li>
+<li>Footer</li>
+<li>Typology</li>
+<li>Navigation</li>
+<li>User interaction</li>
 </ul>
 <hr />
 
@@ -238,6 +261,20 @@
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 
