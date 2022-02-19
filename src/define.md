@@ -1,6 +1,6 @@
 # Define Team
 
-> Defining websites helps the _Iterative Development_ teams and stakeholders to understand the project.
+> Defining websites helps the _Iterative Development_ teams and stakeholders understand of the project.
 >
 > Defining website prerequisites is the first steps in optimizing website costs.
 

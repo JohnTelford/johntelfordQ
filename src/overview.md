@@ -3,7 +3,7 @@
 
 >This website discusses optimizing website project life time costs. It describes using a site generator for developing and deploying websites. It is based on *Iterative Development* and *Web Component Technologies*.
 >
->The basic idea behind *Iterative Development* is to develop a system through repeated cycles (iterative) and in smaller portions at a time (incremental), allowing iterative development teams to take advantage of what was learned during development of earlier parts or versions of the system. 
+>The basic idea of *Iterative Development* is to develop a system through repeated cycles (iterative) and in smaller portions at a time (incremental), allowing iterative development teams to take advantage of what was learned during development of earlier parts or versions of the system. 
 >
 >*Web Component Technologies* enable creating reusable custom elements, with their functionality encapsulated away from the rest of the code, and utilized in website development.
 >
@@ -25,7 +25,7 @@ More than half of mobile user will leave a page that takes longer than 3 seconds
 
 Most People visit websites for content. They have little interest in how the content is created or how it gets to their screen. Most access websites using mobile devices. Everyone wants websites pages to load quick and pages that conform to their screen size. The website look and feel, users experience, functionality, also needs to be consistent and complement the content.
 
-The Google [PageSpeed Insights](https://pagespeed.web.dev/) website reports on the performance of a website page on both mobile and desktop devices, and provides suggestions on how pages may be improved.
+The Google [PageSpeed Insights](https://pagespeed.web.dev/) website reports on the performance of websites on both mobile and desktop devices, and provides suggestions on how pages may be improved.
 
 Google reports mobile website pages load within 22 seconds on average. However, 53 percent of mobile users will leave a page that takes longer than 3 seconds to load.
 
@@ -38,22 +38,19 @@ Teams work together delivering their work to other teams during the website life
 
 The slightest errors or security issues will require remediations sometime during the life time of the website.
 
-
-This website discusses optimizing website project life time costs. It describes using a site generator for developing and deploying websites. It is based on _Iterative Development_ and _web component technologies_.
-
 ---
 
 <img src="iterativedev.png" height=400 width=400 />
 
 **Iterative website development Teams**
 
-Iterative website development enables the _Define, Design, Develop, Deploy and Maintain_ teams to be operational at the same time creating and testing functionality, and remediating defects.
+Iterative website development enables the _Define, Design, Develop, Deploy and Maintain_ teams to be operational at the same time creating, testing, and remediating defects.
 
 ---
 
 ## Defect Remediation Costs
 
-Probably the highest cost over the life time of website projects may be remediating defects.
+The highest cost over the life time of website projects may be remediating defects.
 
 Content and software defects cost less when found early, as this chart shows:
 

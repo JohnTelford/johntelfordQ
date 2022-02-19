@@ -6,14 +6,14 @@
 ## Overview
 
 The core foundations of a  user's website experience are:
-> 
-> - **Fast** - Website responds quickly to user interactions with  smooth scrolling.
-> 
-> - **Integrated** - The website uses the full  capabilities of the user device to create an experience true to the device.
-> 
-> - **Reliable** - Loads quickly and reliably even in  uncertain network conditions.
-> 
-> - **Engaging** - Keeps user coming back to a website that is designed to look and feel natural.
+
+- **Fast** - Website responds quickly to user interactions with  smooth scrolling.
+
+- **Integrated** - The website uses the full  capabilities of the user device to create an experience true to the device.
+
+- **Reliable** - Loads quickly and reliably even in  uncertain network conditions.
+
+- **Engaging** - Keeps user coming back to a website that is designed to look and feel natural.
 
 
 ---

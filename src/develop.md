@@ -6,12 +6,12 @@
 
 The Develop team prerequisites are making decisions about resources required to transform the _Define_ and _Design_ work into a website, and infrastructure. This includes the site generator 
 
-# TODO
-
-Use blog site generator link
+<!-- 
+TODOUse blog site generator link 
+FIX 
 
 [framework](https://docusaurus.io/docs#comparison-with-other-tools) and programming tools.
-
+-->
 ---
 
 ### Developer Iterative Development Stack

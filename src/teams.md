@@ -5,8 +5,6 @@
 >The slightest errors or security issues will require remediations sometime during the life time of the website.
 
 
-This website discusses optimizing website project life time costs. It describes using a site generator for developing and deploying websites. It is based on _Iterative Development_ and _web component technologies_.
-
 <img src="iterativedev.png" height=400 width=400 />
 
 **Iterative Development Teams**
