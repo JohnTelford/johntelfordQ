@@ -16,11 +16,10 @@ Iterative website development enables the _Define, Design, Develop, Deploy and M
 ## Teams Prerequisites
 
 Define
-
 : The *Define* team prerequisites are defining what the project is about, funding, purpose, functionality, stakeholders, content, *must* and *want* features, and *security*.
 
 Design
-:The *Design* team prerequisites are making decisions about Website Design, Consistency, Theme, Color Scheme, Typology, Navigation, and User Interaction.
+: The *Design* team prerequisites are making decisions about Website Design, Consistency, Theme, Color Scheme, Typology, Navigation, and User Interaction.
 
 Develop
 : The *Develop* team prerequisites are:
