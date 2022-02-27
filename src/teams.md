@@ -9,7 +9,7 @@
 
 **Iterative Development Teams**
 
-Iterative website development enables the _Define, Design, Develop, Deploy and Maintain_ teams to be operational at the same time creating, testing website and remediating defects.
+Iterative website development enables the _Define, Design, Develop, Deploy and Maintain_ teams to be operational at the same time creating, testing  and remediating website defects.
 
 ---
 
