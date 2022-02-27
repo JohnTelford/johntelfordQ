@@ -38,8 +38,6 @@ Teams work together delivering their work to other teams during the website life
 
 The slightest errors or security issues will require remediations sometime during the life time of the website.
 
----
-
 <img src="iterativedev.png" height=400 width=400 />
 
 **Iterative website development Teams**

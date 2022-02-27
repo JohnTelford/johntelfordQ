@@ -1,3 +1,3 @@
 # Blog
 
-Click to view [Tech Talk John Blog](https://techtalkjohn.com/)
+Click to view  [Tech Talk John Blog](https://techtalkjohn.com/)
