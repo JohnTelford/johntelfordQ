@@ -29,7 +29,6 @@ Website design prerequisites are making decisions about:
 - User Interaction
 
 <!--
- use elsewhere
 I have reincarnated JohnTelford.com using several of these and other [Development Frameworks](https://docusaurus.io/docs#comparison-with-other-tools). The last two reincarnations have been:
 
 
