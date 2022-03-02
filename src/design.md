@@ -28,30 +28,45 @@ Website design prerequisites are making decisions about:
 - Navigation
 - User Interaction
 
-<!--
+
 I have reincarnated JohnTelford.com using several of these and other [Development Frameworks](https://docusaurus.io/docs#comparison-with-other-tools). The last two reincarnations have been:
 
 
 ### Docusaurus
 
-<img src= "docusauruslogo.png" height=100 width=100  />
-
+![Docusaurus](docusauruslogo.png)
   
 The perquisites requirements for this website can be realized using the [Docusaurus](https://docusaurus.io) development framework. Any of the Docusaurus attributes may be changes.
 
 The website design prerequisites can be realized using the Docusaurus development framework.
 
-### mdbook
+### mdBook
 
-<img src= "markdownlogo.png" height=100 width=150 />
 
 The [mdbook](https://crates.io/crates/mdbook) uses [markdown](https://www.markdownguide.org) with imbedded HTML. It does not abstract`React`
 
 This website is Brochureware. I found it was faster, cleaner, and less complicated to create it using `mdbook`.
 
-I recommend using `Docusaurus` for a more complex user interface and material because it abstracts `react` so one can use `mdx` and `jsx`.
+### Summary
 
--->
+#### Docusaurus  
+Using `Docusaurus` for user interface and material because it abstracts `react`. Use `mdx` and `jsx` to creating more complex user interfaces .
+
+#### mdBook   
+mdBook is a command line tool to create books with Markdown. It is ideal for creating product or API documentation, tutorials, course materials or anything that requires a clean, easily navigable and customizable presentation.
+
+- Lightweight Markdown syntax helps you focus more on your content
+- Integrated search support
+- Color syntax highlighting for code blocks for many different languages
+- Theme files allow customizing the formatting of the output
+- Preprocessors can provide extensions for custom syntax and modifying content
+- Backends can render the output to multiple formats
+- Written in Rust for speed, safety, and simplicity
+
+[mdBook Documentation](https://rust-lang.github.io/mdBook/) is an example of what mdBook produces. The [Rust Programming Language](https://doc.rust-lang.org/book/) book is another example of mdBook in action.
+
+
+
 ---
 
 ## Responsive Website Design

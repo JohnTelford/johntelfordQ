@@ -2,7 +2,7 @@
 
 > ***Caution***
 > 
-> Work in progress - v 0.2.1 - Mar 1, 2022
+> Work in progress - v 0.2.2 - Mar 2, 2022
 
 
 ---

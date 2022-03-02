@@ -57,12 +57,9 @@
   
   - [Contact](contact.md)
 
-
 [Hype Curve](hypecurve.md)
 
-
 [Blog](blog.md)
-
 
 [Colophon](colophon.md)
   

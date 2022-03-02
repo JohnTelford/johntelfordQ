@@ -1,14 +1,3 @@
----
-slug: deploy
-title: Deploy
-tags: []
----
-
-:::caution Work in Progress
-:::
-
----
-
 ## Deploy
 
 Deploying a website is making it available on the Internet. The production version is deployed when stakeholders agree. Meanwhile, developers working on features, fixes, or testing may deploy private website with their changes, without disturbing other developers work or the production version. This enables the stakeholders to monitor progress.
@@ -30,13 +19,11 @@ Deploying a website is making it available on the Internet. The production versi
 
 This site is using [Vercel](https://vercel.com/) Global [Content Delivery Network (CDN)](https://en.wikipedia.org/wiki/Content_delivery_network) for deployment. Their motto is _Develop, Preview, Ship_.
 
-:::note
-
 ---
 
 ### Vercel
 
-This site is using [Vercel](https://vercel.com/) Global [Content Delivery Network (CDN)](https://en.wikipedia.org/wiki/Content_delivery_network) for deployment. Their motto is _Develop, Preview, Ship_.
+This website is using [Vercel](https://vercel.com/) Global [Content Delivery Network (CDN)](https://en.wikipedia.org/wiki/Content_delivery_network) for deployment. Their motto is _Develop, Preview, Ship_.
 
 Vercel builds the website and deploys when `git` pushes changes from the _Local Repository_ to the _Central Repository_, _Vercel_ then automatically builds the website and deploys to the Internet.
 
@@ -46,8 +33,6 @@ Some benefits deploying project with Vercel are:
 
 - Performance
 - Ease of use
-
-:::
 
 Some features I like are:
 

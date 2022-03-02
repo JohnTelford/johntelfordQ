@@ -9,7 +9,6 @@ The Develop team prerequisites are making decisions about resources required to 
 <!--
 FIX Use blog site generator link
 [framework](https://docusaurus.io/docs#comparison-with-other-tools) and programming tools.
-FIXME
 HACK
 BUG
 FIXME
