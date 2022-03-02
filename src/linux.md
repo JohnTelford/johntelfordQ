@@ -2,8 +2,7 @@
 
 ---
 
-<img src="LinuxLogo.png" height=200 width=200 />
-
+![Linus](LinuxLogo.png)
 
 [Linux](https://www.linux.org/) is an excellent example of free and open-source software collaboration. The source code may be used, modified and distributed commercially or non-commercially by anyone under the terms of its respective licenses
 

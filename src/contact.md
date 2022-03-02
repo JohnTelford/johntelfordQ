@@ -4,9 +4,7 @@
 
 A labyrinth symbolizes possible difficulties reaching website project goals. Knowledge and experience with web technology disciplines may be helpful.
 
-<img src="mugShot.png" height=80 width=100/>
-
-
+![Mug Shot](mugShot.png)
 
 John Telford  
 Portland, Oregon  

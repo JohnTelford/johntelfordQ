@@ -6,7 +6,7 @@ The Hype Curve helps separate reality from fiction.
 
 ---
 
-<img src="hypecurve.png" height=250 width=500 />
+![Hype Curve](hypecurve.png)
 
 ---
 

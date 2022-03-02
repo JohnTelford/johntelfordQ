@@ -12,7 +12,7 @@ The troika of [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML), [CSS](h
 
 ## Hypertext Markup Language (HTML)
 
-<img src="HTML5logo.png" height=100 width=100 />
+![HTML](HTML5logo.png)
 
 [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) is used to create websites. It is the standard markup language for browser website pages. It defines the content and structure of website pages. HTML  can be assisted by  Cascading Style Sheets ([CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)) to instruct browsers how elements are to be styled and rendered, and [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) is for user interactivity.
 
@@ -23,7 +23,7 @@ The troika of [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML), [CSS](h
 
 >Not to be confused with the [Java](https://www.java.com/en/download/help/whatis_java.html) programming language.
 
-<img src="JavaScript.png" height=100 width=100 /> />
+![JavaScript](JavaScript.png)
 
 [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) Used to make webpages interactive. It is the programming language of the web. It is the most popular website programming language choice for the million of programmers globally. It is a high-level language, flexible and expressive enough to write website applications. It has many advantages. It is dynamically typed, requires no compile step, and has a huge ecosystem that provides powerful frameworks, libraries, and other tools. JavaScript is one of the core technologies of website [troika](http://localhost:3000/docs/programming#languages) website programming. It enables interactive web pages and is an essential part of web applications. All contemporary web browsers have a dedicated JavaScript virtual machine built-inn to execute it.
 
@@ -31,7 +31,8 @@ The troika of [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML), [CSS](h
 
 ## CSS
 
-<img src="CSS3logo.png" height=100 width=100 /> />
+
+![CSS](CSS3logo.png)
 
 [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document written in [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 
@@ -41,8 +42,7 @@ CSS instructs browsers how elements are to be styled and rendered.
 
 ## JSX
 
-<img src="jsxlogo.png" height=100 width=100 /> />
-
+![JSX](jsxlogo.png)
 
 [JSX](https://reactjs.org/docs/introducing-jsx.html#Next.js-focus-wrapper) (JavaScript eXtended) is a statically-typed syntax extension to JavaScript. It enables writing [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) in JavaScript. JSX converts HTML tags into React elements. It is compiled to JavaScript.
 
@@ -50,7 +50,7 @@ CSS instructs browsers how elements are to be styled and rendered.
 
 ## MDX
 
-<img src="mdxLogo.png" height=50 width=100 />
+![MDX](mdxLogo.png)
 
 [MDX](https://mdxjs.com/) is Markdown for the component era. It enables seamlessly writing JSX in Markdown documents. It is compiled to JSX components, It enables using Markdown’s terse syntax for writing website media, and JSX for components.
 

@@ -2,7 +2,7 @@
 
  ---
  
-<img src="AppleLogo.png" height=200 width=200 />
+![Apple](AppleLogo.png)
 
 [Apple](https://www.apple.com) is a computer manufacturing company delivering workstation products with Apple developed macOS certified UNIX operating systems.
 

@@ -55,7 +55,7 @@
 
 - [Company](company.md)
   
-	  - [Contact](contact.md)
+  - [Contact](contact.md)
 
 
 [Hype Curve](hypecurve.md)

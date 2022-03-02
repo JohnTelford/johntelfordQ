@@ -4,7 +4,7 @@
 
 ---
 
-<img src="MicrosoftLogo.png" height=200 width=200 />
+![Microsoft](MicrosoftLogo.png)
 
 [Microsoft](https://www.microsoft.com/en-us/) is primerly a software development company. Microsoft _Windows_ is a proprietary graphical operating system developed and marketed by Microsoft. Windows is the most used operating system on servers, personal computers desktops, laptops, and game consoles. Microsoft also manufactures Surface laptops and Xbox.
 
