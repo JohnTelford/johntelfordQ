@@ -3,7 +3,7 @@
 ---
 
 ```admonish info
-A labyrinth symbolizes possible difficulties reaching website project goals. Knowledge and experience with web technology disciplines may be helpful.
+A labyrinth symbolizes possible difficulties reaching website project goals. Knowledge and experience with website technology disciplines may be helpful.
 ```
 
 ![Mug Shot](mugShot.png)

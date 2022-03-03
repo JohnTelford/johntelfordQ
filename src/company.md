@@ -1,7 +1,7 @@
 # Company
 
 ```admonish info
-I am the sole proprietor of *JohnTelford.com LLC*, a technology consulting company working with client  development projects for more that 30 years.the company.
+I am the sole proprietor of *JohnTelford.com LLC*, a technology consulting company working with client  development projects for more that 30 years.
 ```
 
 ## Nuggets
