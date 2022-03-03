@@ -17,7 +17,7 @@
 
   - [Develop](develop.md)
 
-	- [Maintain](maintain.md)
+  - [Maintain](maintain.md)
 
 - [Web Components](webcomp.md)
 
@@ -57,9 +57,12 @@
   
   - [Contact](contact.md)
 
+
 [Hype Curve](hypecurve.md)
 
+
 [Blog](blog.md)
+
 
 [Colophon](colophon.md)
   

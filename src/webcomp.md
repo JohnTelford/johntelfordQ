@@ -1,8 +1,8 @@
 # Web Components
 
----
-
+```admonish info
 *Web Development Components For The Component Era.* Web Components are independent and reusable bits of code. They serve the same purpose as [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) functions, but work in isolation.
+```
 
 Web  components are 
 A set of web platform APIs that enables creating new custom, reusable, encapsulated [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) tags to use in web pages and web apps.

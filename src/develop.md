@@ -1,6 +1,8 @@
 ## Develop Team
 
->The _Develop_ team translates the _Define_ and _Design_ processes into website pages using abstract logical structures, rigid nonhuman website programming languages, and a variety of tools. The slightest errors or security issues will require remediation sometime during the life time of the website.
+```admonish info
+The _Develop_ team translates the _Define_ and _Design_ processes into website pages using abstract logical structures, rigid nonhuman website programming languages, and a variety of tools. The slightest errors or security issues will require remediation sometime during the life time of the website.
+```
 
 ### Prerequisites
 
@@ -18,7 +20,9 @@ TODO
 
 ### Developer Iterative Development Stack
 
-> The _Iterative Development Stack_ deploys  websites to the Internet. It is device agnostic. What works for big screens, works for small screens.
+```admonish info
+The _Iterative Development Stack_ deploys  websites to the Internet. It is device agnostic. What works for big screens, works for small screens.
+```
 
 <img src="webdevstack.png"  height= 840 width=500 />
 
@@ -31,7 +35,9 @@ TODO
 
 <img src="vscodelogo.png" height=100 width=100/>
 
-> [Visual Studio Code](https://code.visualstudio.com) (VScode) is a Microsoft product.
+```admonish info
+[Visual Studio Code](https://code.visualstudio.com) (VScode) is a Microsoft product.
+```
 
 It has become the goto editor for many. It is free, built on open source, and runs everywhere.
 
@@ -50,7 +56,9 @@ Some of the development command and control tasks are:
 
 ---
 
-> The key _Iterative Development_ technologies are [`Git`](https://git-scm.com) and [`GitHub`](https://github.com/).
+```admonish info
+The key _Iterative Development_ technologies are [`Git`](https://git-scm.com) and [`GitHub`](https://github.com/).
+```
 
 ---
 
@@ -58,19 +66,25 @@ Some of the development command and control tasks are:
 
 <img src="gitlogo.png" width=100 height=100/>
 
-> [`Git`](https://git-scm.com/) is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
->
-> `Git` is easy to learn and has a tiny footprint with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows.
+```admonish info
+[`Git`](https://git-scm.com/) is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+```
+
+`Git` is easy to learn and has a tiny footprint with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows.
 
 #### GitHub
 
 <img src="gitHublogo.png" width=100 height=100/>
 
-> All developers need a `GitHub` account. It is a Microsoft company
+```admonish info
+All developers need a `GitHub` account. It is a Microsoft company
+```
 
 [`GitHub`](https://github.com/) is a  Distributed Version Control Systems (DVCS) enabling multiple developers or teams to work separately without having an impact on the work of others. GitHub is a central online web hosted project repository for all project files. It is a unified source of truth. It helps teams collaborate and maintain the entire history of project file changes. Teams can view history of all changes and go back to previous file versions. 
 
+```admonish info
 It helps answer the questions who changed what, where, when, and why?
+```
 
 All team members have their own local copy of the central project repository. They make changes, fix defects, add new features to their repository, without interfering with others team members, or the central repository. 
 

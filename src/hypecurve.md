@@ -2,7 +2,9 @@
 
 ---
 
+```admonish info
 The Hype Curve helps separate reality from fiction.
+```
 
 ---
 

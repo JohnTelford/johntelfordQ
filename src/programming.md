@@ -4,9 +4,11 @@
 
 ## Languages
 
+```admonish info
 The troika of [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), and [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) website programming languages have become standard for creating website pages, They are interpreted and rendered by web browsers.
 
->The job of a website development frameworks is to compile the troika and non troika programming languages, such as MDX and JSX,  into a combination the standard troika languages to be executed in web browsers.
+The job of a website development frameworks is to compile the troika and non troika programming languages, such as MDX and JSX,  into a combination the standard troika languages to be executed in web browsers.
+```
 
 ---
 

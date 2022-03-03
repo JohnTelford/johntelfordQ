@@ -1,7 +1,8 @@
 # Design Team
 
-> Website _Design_ is creating the website look and feel. Useful websites require the user experience and functionality be consistence and complement the content.
-
+```admonish info
+Website _Design_ is creating the website look and feel. Useful websites require the user experience and functionality be consistence and complement the content.
+```
 
 ## Overview
 

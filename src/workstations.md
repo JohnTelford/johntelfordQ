@@ -1,6 +1,8 @@
 # Workstations
 
->The key hardware for website developers are workstations
+```admonish info
+The key hardware for website developers are workstations
+```
 
 ---
 

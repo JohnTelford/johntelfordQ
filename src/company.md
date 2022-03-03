@@ -1,8 +1,8 @@
 # Company
 
-
-
->  I am the sole proprietor of *JohnTelford.com LLC*, a technology consulting company working with client  development projects for more that 30 years.the company.
+```admonish info
+I am the sole proprietor of *JohnTelford.com LLC*, a technology consulting company working with client  development projects for more that 30 years.the company.
+```
 
 ## Nuggets
 Way back when the Internet web browsers and programming languages came along, I became interested in web technologies, and began learn by doing technology deep dives. I have years of learning ever changing Electronics, Software, and Web technologies by hands-on experiencing the technologies du jour.

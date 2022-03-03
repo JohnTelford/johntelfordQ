@@ -1,9 +1,13 @@
 # Iterative Development Teams
 
->Teams work together delivering their work to other teams during the life time of the website.
->
->The slightest errors or security issues will require remediations sometime during the life time of the website.
+```admonish info
+Teams work together delivering their work to other teams during the life time of the website.
 
+The slightest errors or security issues will require remediations sometime during the life time of the website.
+
+---
+
+```
 
 <img src="iterativedev.png" height=400 width=400 />
 

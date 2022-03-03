@@ -1,7 +1,9 @@
 # Navigating Website
 
->The website is organized into *chapters*.
+```admonish info
+The website is organized into *chapters*.
 Each chapter is a separate page.
+```
 
 ---
 
