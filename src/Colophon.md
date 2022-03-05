@@ -42,15 +42,15 @@ Trio and iA Writer have similar functionality. Trio value added is being able to
 ## [ChronoSync](https://www.econtechnologies.com/chronosync/overview.html)
 > ChronoSync is a comprehensive toolkit for performing file synchronization, data backup and system bootable backups on your macOS computer.
 
-<!--
-<img src="webdevstack.png"  height= 840 width=500 />
--->
-
 ---
 
-# Development Stack
+# Website Development Stack
 
 ![Developer Iterative Development Stack](webdevstack.png)
 
 **Developer Iterative Development Stack**
+
+When stakeholders determine a developers changes, defect fixes, or new features are ready,
+
+
 

@@ -142,9 +142,9 @@
 <p>Work in Progress</p>
 </div>
 <div>
-<p>v 0.2.6 - Mar 4, 2022</p>
+<p>v 0.2.7 - Mar 5, 2022</p>
 <hr />
-<p>This website was created by <a href="company.html">johntelford.com LLC</a>. It is about optimizing website project life time costs using a website generator for developing and deploying websites. It is based on <em>Iterative Development</em> and <em>Web Component Technologies</em>.</p>
+<p>This website was created by <a href="company.html">johntelford.com LLC</a>. It is about optimizing website project life time costs using a static-site generator for developing and deploying websites. It is based on <em>Iterative Development</em> and <em>Web Component Technologies</em>.</p>
 <hr />
 </div>
 </div>
@@ -190,10 +190,10 @@ Clicking a highlighted word or pressing the <code>Esc</code> key will remove the
 <p>Info</p>
 </div>
 <div>
-<p>This website discusses optimizing website project life time costs. It describes using a site generator for developing and deploying websites. It is based on <em>Iterative Development</em> and <em>Web Component Technologies</em>.</p>
+<p>This website discusses optimizing website project life time costs. It describes using a static-site generator for developing and deploying websites. It is based on <em>Iterative Development</em> and <em>Web Component Technologies</em>.</p>
 <p>The basic idea of <em>Iterative Development</em> is to develop a system through repeated cycles (iterative) and in smaller portions at a time (incremental), allowing iterative development teams to take advantage of what was learned during development of earlier parts or versions of the system. </p>
 <p><em>Web Component Technologies</em> enable creating reusable custom elements, with their functionality encapsulated away from the rest of the code, and utilized in website development.</p>
-<p>Iterative web development teams working together can help optimizing website costs and lower some the difficulties creating websites.</p>
+<p>Iterative web development teams working together can help optimizing website costs and lower some of the difficulties creating websites.</p>
 </div>
 </div>
 <hr />
@@ -910,13 +910,11 @@ Mainstream adoption starts to take off. Some technologies making it to the Plate
 <blockquote>
 <p>ChronoSync is a comprehensive toolkit for performing file synchronization, data backup and system bootable backups on your macOS computer.</p>
 </blockquote>
-<!--
-<img src="webdevstack.png"  height= 840 width=500 />
--->
 <hr />
-<h1 id="development-stack"><a class="header" href="#development-stack">Development Stack</a></h1>
+<h1 id="website-development-stack"><a class="header" href="#website-development-stack">Website Development Stack</a></h1>
 <p><img src="webdevstack.png" alt="Developer Iterative Development Stack" /></p>
 <p><strong>Developer Iterative Development Stack</strong></p>
+<p>When stakeholders determine a developers changes, defect fixes, or new features are ready,</p>
 
                     </main>
 
@@ -932,6 +930,20 @@ Mainstream adoption starts to take off. Some technologies making it to the Plate
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>

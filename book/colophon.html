@@ -170,13 +170,11 @@
 <blockquote>
 <p>ChronoSync is a comprehensive toolkit for performing file synchronization, data backup and system bootable backups on your macOS computer.</p>
 </blockquote>
-<!--
-<img src="webdevstack.png"  height= 840 width=500 />
--->
 <hr />
-<h1 id="development-stack"><a class="header" href="#development-stack">Development Stack</a></h1>
+<h1 id="website-development-stack"><a class="header" href="#website-development-stack">Website Development Stack</a></h1>
 <p><img src="webdevstack.png" alt="Developer Iterative Development Stack" /></p>
 <p><strong>Developer Iterative Development Stack</strong></p>
+<p>When stakeholders determine a developers changes, defect fixes, or new features are ready,</p>
 
                     </main>
 
@@ -198,6 +196,20 @@
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>

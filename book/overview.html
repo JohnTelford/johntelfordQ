@@ -141,10 +141,10 @@
 <p>Info</p>
 </div>
 <div>
-<p>This website discusses optimizing website project life time costs. It describes using a site generator for developing and deploying websites. It is based on <em>Iterative Development</em> and <em>Web Component Technologies</em>.</p>
+<p>This website discusses optimizing website project life time costs. It describes using a static-site generator for developing and deploying websites. It is based on <em>Iterative Development</em> and <em>Web Component Technologies</em>.</p>
 <p>The basic idea of <em>Iterative Development</em> is to develop a system through repeated cycles (iterative) and in smaller portions at a time (incremental), allowing iterative development teams to take advantage of what was learned during development of earlier parts or versions of the system. </p>
 <p><em>Web Component Technologies</em> enable creating reusable custom elements, with their functionality encapsulated away from the rest of the code, and utilized in website development.</p>
-<p>Iterative web development teams working together can help optimizing website costs and lower some the difficulties creating websites.</p>
+<p>Iterative web development teams working together can help optimizing website costs and lower some of the difficulties creating websites.</p>
 </div>
 </div>
 <hr />
@@ -209,6 +209,20 @@
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>
