@@ -141,7 +141,7 @@
 <p>Work in Progress</p>
 </div>
 <div>
-<p>v 0.2.5 - Mar 4, 2022</p>
+<p>v 0.2.6 - Mar 4, 2022</p>
 <hr />
 <p>This website was created by <a href="company.html">johntelford.com LLC</a>. It is about optimizing website project life time costs using a website generator for developing and deploying websites. It is based on <em>Iterative Development</em> and <em>Web Component Technologies</em>.</p>
 <hr />
@@ -168,20 +168,6 @@
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3000/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>
