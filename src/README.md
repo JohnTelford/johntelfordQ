@@ -1,7 +1,7 @@
 # Introduction
 
 ```admonish warning "Work in Progress"
-v 0.2.2 - Mar 2, 2022
+v 0.2.3 - Mar 4, 2022
 
 ---
 
