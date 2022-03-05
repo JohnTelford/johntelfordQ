@@ -5,11 +5,11 @@
 # Static-Site Generators
 
 ```admonish info
-The troika of [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), and [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) website programming languages have become standard for creating website pages, They are interpreted and rendered by web browsers.
+The troika of [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), and [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) website programming languages have become standard for creating website pages. The web browser interprets the standard troika languages and renders the website.
 
-The job of a static-site generator is to compile all of the website pages written in troika and non troika programming languages such as Markdown, into a single file only containing a combination of standard troika languages that will be executed in web browsers.
+The job of a static-site generators is to compile the website pages written in troika and non troika programming languages such as Markdown, into a single file only containing a combination of standard troika languages.
 
-A web browser loads a website single file only once from the website server and interprets and renders the website. 
+A web browser loads the website single file from the website server and interprets and renders the website. 
 
 ```
 
