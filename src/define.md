@@ -1,7 +1,7 @@
 # Define Team
 
 ```admonish info
-Defining websites helps the _Iterative Development_ teams and stakeholders understand of the project.
+Defining websites helps the _Iterative Development_ teams and stakeholders understand the project.
 
 Defining website prerequisites is the first steps in optimizing website costs.
 ```
@@ -14,7 +14,7 @@ Websites Define prerequisites are what the project is about, including:
 - Website Type
 - Stakeholders
 - The *Musts* and *Wants* Functionality
-- Website Media
+- Website material
 - Security
 
 ### Purpose
@@ -45,11 +45,11 @@ The _Iterative Development_ teams deploy private websites for stakeholders revie
 
 - When stakeholders agree the website _Wants_ functionalities are operational, the website is production quality and ready to be deployed to the Internet.
 
-### Website Media
+### Website material
 
 - What is the website message ?
 
-- What existing and new website media will be in website pages?
+- What existing and new website material will be in website pages?
 
 ### Security
 

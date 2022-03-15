@@ -42,7 +42,7 @@ Instead of artificially separating technologies by putting markup and logic in s
 <img src="mdxLogo.png" height={50} width={100} />
 
 
-[MDX](https://mdxjs.com/) is Markdown for the component era. It enables seamlessly writing JSX in Markdown documents. It is compiled to JSX components, It enables using Markdown’s terse syntax for writing website media, and JSX for components.
+[MDX](https://mdxjs.com/) is Markdown for the component era. It enables seamlessly writing JSX in Markdown documents. It is compiled to JSX components, It enables using Markdown’s terse syntax for writing website material, and JSX for components.
 
 
 Markdown is a faster way of creating and maintaining website material. It is a HTLM abstraction that is compiled to web standard [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)

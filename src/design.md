@@ -29,8 +29,9 @@ Website design prerequisites are making decisions about:
 - Navigation
 - User Interaction
 
+---
 
-I have reincarnated JohnTelford.com using several of these and other [Development Frameworks](https://docusaurus.io/docs#comparison-with-other-tools). The last two reincarnations have been:
+I have reincarnated JohnTelford.com using several of these and other static site generators [Development Frameworks](https://docusaurus.io/docs#comparison-with-other-tools). The last two reincarnations have been:
 
 
 ### Docusaurus

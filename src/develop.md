@@ -1,37 +1,65 @@
-## Develop Team
+# Develop Team
 
 ```admonish info
 The _Develop_ team translates the _Define_ and _Design_ processes into website pages using abstract logical structures, rigid nonhuman website programming languages, and a variety of tools. The slightest errors or security issues will require remediation sometime during the life time of the website.
 ```
 
-### Prerequisites
+## Prerequisites
 
-The Develop team prerequisites are making decisions about resources required to transform the _Define_ and _Design_ work into a website, and infrastructure. This includes the site generator 
+The Develop team prerequisites are making decisions about resources required to transform the _Define_ and _Design_ work into a website, and infrastructure. This includes the site generator.
 
-<!--
-FIX Use blog site generator link
-[framework](https://docusaurus.io/docs#comparison-with-other-tools) and programming tools.
-HACK
-BUG
-FIXME
-TODO
--->
+A Static Site Generator is optimum for developing and deploying brochureware websites.
+
 ---
 
-### Developer Iterative Development Stack
+# Static Site Generators
 
 ```admonish info
-The _Iterative Development Stack_ deploys  websites to the Internet. It is device agnostic. What works for big screens, works for small screens.
+The troika of [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), and [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) website programming languages have become standard for creating website pages. The web browser interprets the standard troika languages and renders the website.
+
+The job of a static site generators is to compile the website pages written in troika and non troika programming languages such as Markdown, into a single file only containing a combination of standard troika languages.
+
+A web browser loads the website single file from the website server and interprets and renders the website. 
+
 ```
 
-<img src="webdevstack.png"  height= 840 width=500 />
+## mdBook
 
-**Developer Iterative Development Stack**
+[mdBook](https://rust-lang.github.io/mdBook/) is a static site generator used to create and maintain websites. An example is [Johntelford](https://johntelford.com). mdBook is a static site generators command line tool to create books with Markdown. It is ideal for creating  documentation, tutorials, course materials or any brochureware that requires a clean, easily navigable and customizable presentation. It does not use [React](https://reactjs.org/).
+
+## Docusaurus
+
+[Docusaurus](https://docusaurus.io/) is a static site generator used to create and maintain websites. An example is [TechTalkJohn](https://techtalkjohn.com) blog. It builds a single-page application with fast client-side navigation, leveraging the full power of [React](https://reactjs.org/) to make websites 
+
+---
+
+# Website Material
+
+![Web Material](websitetextmaterial.png) 
+
+The [Johntelford](https://johntelford.com) and  [TechTalkJohn](https://techtalkjohn.com) websites are example of using these application to create and maintain website Markdown text and troika web programming materials. 
+
+## [iA Writer](https://ia.net/writer)
+> "iA Writer offers a unique writing experience that lets you concentrate and clarify your message. Used by half a million people worldwide, its powerful interface is crafted to cut out noise, let you focus on what you want to say, and help you structure and trim your text."
+
+iA Writer mirrors website Markdown text and troika web programming materials in the local repository. iA Writer is where text material is changed or new text material is created, and kept synchronized with the local repository using ChronoSync. Sometimes in the heat of development or defect remediation, changes are made to files in the Local Repository. iA Writer needs to be synchronized  with the Local Repository changes using ChronoSync.
+
+## [Taio](https://taio.app) 
+>"A modern app for text processing on iPhone, iPad, and Mac, provides seamless experience for clipboard, markdown editing and text workflows."
+
+Trio and iA Writer have similar functionality. Trio value added is being able to edit iA Writer files using iPhone, iPad, and Mac locally or remotely.
+
+## [ChronoSync](https://www.econtechnologies.com/chronosync/overview.html)
+>"ChronoSync is a comprehensive toolkit for performing file synchronization macOS computers"
+
+ChronoSync is used to keep iA Write and the local repository in sync.
 
 ---
 
 
-#### VScode
+# Website Development Tools
+
+## VScode
 
 <img src="vscodelogo.png" height=100 width=100/>
 
@@ -41,11 +69,11 @@ The _Iterative Development Stack_ deploys  websites to the Internet. It is devic
 
 It has become the goto editor for many. It is free, built on open source, and runs everywhere.
 
-`VScode` is the command and control center for the website project.
+`VScode` is the command and control center for the website development stack.
 
 Some of the development command and control tasks are:
 
-- Editing code and website media
+- Editing Markdown text and troika web programming materials
 - Use `git` and `GitHub` to manage project files. `Git`is built-in and optimized to work with Microsoft `GitHub`
 - Editor tool extensions continually check for syntax and other errors
 - Live edit browser previews show how edits will look when deployed
@@ -62,118 +90,51 @@ The key _Iterative Development_ technologies are [`Git`](https://git-scm.com) an
 
 ---
 
-#### git
+## git
 
 <img src="gitlogo.png" width=100 height=100/>
 
 ```admonish info
 [`Git`](https://git-scm.com/) is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
-```
 
 `Git` is easy to learn and has a tiny footprint with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows.
+```
 
-#### GitHub
+## GitHub
 
 <img src="gitHublogo.png" width=100 height=100/>
 
 ```admonish info
 All developers need a `GitHub` account. It is a Microsoft company
+"[`GitHub`](https://github.com/) is a  Distributed Version Control Systems (DVCS) enabling multiple developers or teams to work separately without having an impact on the work of others. GitHub is a central online web hosted project repository for all project files. It is a unified source of truth. It helps teams collaborate and maintain the entire history of project file changes. Teams can view history of all changes and go back to previous file versions." 
+
+GitHub is a unified source of truth helping to answer the questions *who* changed *what*, *where*, *when*, and *why*?
 ```
 
-[`GitHub`](https://github.com/) is a  Distributed Version Control Systems (DVCS) enabling multiple developers or teams to work separately without having an impact on the work of others. GitHub is a central online web hosted project repository for all project files. It is a unified source of truth. It helps teams collaborate and maintain the entire history of project file changes. Teams can view history of all changes and go back to previous file versions. 
+---
+
+# Website Development Stack
 
 ```admonish info
-It helps answer the questions who changed what, where, when, and why?
+The _Iterative Website Development Stack_ deploys  websites to the Internet. It is web browser agnostic. What works for big screens, works for small screens.
 ```
 
-All team members have their own local copy of the central project repository. They make changes, fix defects, add new features to their repository, without interfering with others team members, or the central repository. 
 
-Team members may deploy their copy of the repository with their changes, to a private Internet website for stakeholders to see and give feedback.
+![Developer Iterative Development Stack](webdevstack.png)
 
-If the central online repository dies, a client repository can be copied back up to the server to restore it. 
+**Developer Development Stack**
 
-When stakeholders determine some changes, defect fixes, or new features are ready, they will be committed to central project repository, and team members update their local copy by pulling central repository changes into their local repository. This process keeps team members up to date.
+Team members use the Website Development Stack. There would be confusion and possible defects created if Team members were to directly make changes to the same project repository.
 
----
+A solution to this problem is to have one central repository controlled by a gatekeeper. Each team member forks a copy to their GetHub account and makes a clone of it on their workstation.
 
-#### Cloudflare
+Each developer makes changes to their  clone repository. They cannot directly make changes to the central repository. Team members may deploy their copy of the clone repository with their changes, to a private Internet website for stakeholders to see and give feedback.
 
-<img src="cloudflarelogo.png" height=50 width=100 />
+The process is managed using [GitHub for Teams](https://github.com/team). When stakeholders determine developers changes, defect fixes, or new features are ready, a GitHub pull request is made by developers to the central project repository. Project team members and the gatekeeper are notified by GitHub of the pull request. They may examine, comment on, suggest possible changes, and test the code. When the team agrees on developers changes, they are committed to the central project repository by the gatekeeper. This process is repeated for each developer set of changes. Iterations of the central project repository may be deployed by the gatekeeper to a private website for stakeholders viewing.
 
- [`Cloudflare`](https://cloudflare.com/) Global [Content Delivery Network (CDN)](https://en.wikipedia.org/wiki/Content_delivery_network) deploys website to the Internet. 
+The next step is each developer pulls the central repository changes and commits them to their local copy of the central project repository. This process keeps team members up to date on changes.
 
-`Cloudflare` builds a website and deploys it when `git` pushes changes from the _Local Repository_ to the _Central Repository_,  `Cloudflare` then automatically builds the website and deploys it to the Internet.
-
-`Cloudflare` can be configured to deploy public production  and private development versions of the website.
-
-
-### Developer Iterative Development Stack Example
-
-The [ULTIMATE GUIDE TO USING GIT - 
-With Visual Studio Code](https://yourbrainoncomputers.com/using-git-with-visual-studio-code-the-ultimate-guide/) will guide you to installing and learning git, and installing Visual Studio Code and so much more.
-
-
-#### `GitHub` account
-> The Iterative Development Stack depends on users having a GitHub account.
-
----
-
-#### Developer Workflow
-
-
-- Create a new project directory.
-
-- Create and edit website project files.
-
-- Follow the [ULTIMATE GUIDE TO USING GIT - 
-](https://yourbrainoncomputers.com/using-git-with-visual-studio-code-the-ultimate-guide/) *Create New Git Repository* instruction.
-
----
-
- A local repository is on your workstation and a central repository on GitHub.
-
-- Continue editing website project files.
-
-- Every so often `commit` your changes. This insures you have a copy of the project file and project history, stored offsite in the central repository. If your workstation dies, you can quickly create a local directory on your new and improved workstation from the remote repository.
-
-- See the [ULTIMATE GUIDE TO USING GIT
-](https://yourbrainoncomputers.com/using-git-with-visual-studio-code-the-ultimate-guide/). - *Commit a Change to Git*
-
----
-
-#### Website Workflow
-
-- Website [`mdBook`](https://rust-lang.github.io/mdBook/) files are created and edited in the local repository. 
-
-- The `mdBook serve` command renders project file edits in a browser. If viewing the page being edited, it will be updated in near real time.
-
-- The next step is to commit file changes. The `VScode` `git` works with GitHub to update the  central repository with the local repository file changes.
-
-- `Cloudflare` is notified by GitHub when the project central and deploys a website.
-
----
-
-### Team Iterative Development Stack Workflow
-
-The Team Iterative Development Stack is the same as Developer Iterative Development Stack. The difference is there are more than one developer. There would be confusion and possible defects created if the developers were to directly make changes to the same repository.
-
-A solution to this problem is to have one central repository controlled by a gatekeeper. Each team member `fork`s a copy to their GetHub account and makes a `git clone` of it on their workstation. 
-
-Each developer makes changes to their `git clone` repository. They cannot directly make changes to the central repository. Team members may deploy their copy of the clone repository with their changes, to a private Internet website for stakeholders to see and give feedback.
-
-This process is managed using Microsoft free [Git Hub for Teams](https://github.com/team) product. When stakeholders determine a developers changes, defect fixes, or new features are ready, a GitHub `pull` request is made by the developer to the central project repository. Project team members and the gatekeeper are notified by GitHub of the `pull` request. They may examine, comment on, suggest possible changes, and possibly test the code. When the team agrees on the developers changes, they are committed to the central project repository by the gatekeeper. This process is repeated for each developer changes. Iterations of the central project repository may be deployed by the gatekeeper to a private website for stakeholders viewing.
-
-The next step is each developer `pull`s the central repository changes and commits them to their copy of the central project repository. This process keeps team members up to date
-
-The central project repository may be deployed to the public Internet by the gatekeeper after stakeholders agree there have been sufficient iterations.
-
----
-
-
-
-
-
-
+The central project repository may be deployed to the public Internet by the gatekeeper after stakeholders agree there have been sufficient development and testing iterations.
 
 
 

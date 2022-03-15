@@ -4,7 +4,7 @@ This site is built using website components :
 
 - [React](https://reactjs.org/) is for building user interfaces (UIs). It is an open-source, front end, [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) library created by Facebook. 
 
-- [Docusaurus](https://docusaurus.io/) is a static-site generator. It is an open-source website framework created by Facebook. It builds a single-page application with a fast client-side navigation, leveraging React to make websites interactive. [Features](https://docusaurus.io/docs#features)
+- [Docusaurus](https://docusaurus.io/) is a static site generator. It is an open-source website framework created by Facebook. It builds a single-page application with a fast client-side navigation, leveraging React to make websites interactive. [Features](https://docusaurus.io/docs#features)
 
     - Some features I like about Docusaurus are:
         - Powered by MDX

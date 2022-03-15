@@ -1,7 +1,7 @@
 # Overview
 
 ```admonish info
-This website discusses optimizing website project life time costs. It describes using a static-site generator for developing and deploying websites. It is based on *Iterative Development* and *Web Component Technologies*.
+This website discusses optimizing website project life time costs. It describes using a static site generator for developing and deploying websites. It is based on *Iterative Development* and *Web Component Technologies*.
 
 The basic idea of *Iterative Development* is to develop a system through repeated cycles (iterative) and in smaller portions at a time (incremental), allowing iterative development teams to take advantage of what was learned during development of earlier parts or versions of the system. 
 

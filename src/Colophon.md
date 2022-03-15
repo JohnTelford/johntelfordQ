@@ -2,12 +2,12 @@
 
 ---
 
-# Static-Site Generators
+# Static site Site Generators
 
 ```admonish info
 The troika of [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), and [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) website programming languages have become standard for creating website pages. The web browser interprets the standard troika languages and renders the website.
 
-The job of a static-site generators is to compile the website pages written in troika and non troika programming languages such as Markdown, into a single file only containing a combination of standard troika languages.
+The job of a static site generators is to compile the website pages written in troika and non troika programming languages such as Markdown, into a single file only containing a combination of standard troika languages.
 
 A web browser loads the website single file from the website server and interprets and renders the website. 
 
@@ -15,11 +15,11 @@ A web browser loads the website single file from the website server and interpre
 
 ## mdBook
 
-[mdBook](https://rust-lang.github.io/mdBook/) is a static-site generator used to create and maintain websites. An example is [Johntelford](https://johntelford.com). mdBook is a static-site generators command line tool to create books with Markdown. It is ideal for creating  documentation, tutorials, course materials or any brochureware that requires a clean, easily navigable and customizable presentation. It does not use [React](https://reactjs.org/).
+[mdBook](https://rust-lang.github.io/mdBook/) is a static site generator used to create and maintain websites. An example is [Johntelford](https://johntelford.com). mdBook is a static site generators command line tool to create books with Markdown. It is ideal for creating  documentation, tutorials, course materials or any brochureware that requires a clean, easily navigable and customizable presentation. It does not use [React](https://reactjs.org/).
 
 ## Docusaurus
 
-[Docusaurus](https://docusaurus.io/) is a static-site generator used to create and maintain websites. An example is [TechTalkJohn](https://techtalkjohn.com) blog. It builds a single-page application with fast client-side navigation, leveraging the full power of [React](https://reactjs.org/) to make websites 
+[Docusaurus](https://docusaurus.io/) is a static site generator used to create and maintain websites. An example is [TechTalkJohn](https://techtalkjohn.com) blog. It builds a single-page application with fast client-side navigation, leveraging the full power of [React](https://reactjs.org/) to make websites 
 
 ---
 

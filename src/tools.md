@@ -24,7 +24,7 @@ Editing Markdown / MDX website pages and blog posts using iA Writer seems to be 
 <img src="ialogo.png" height=150 width=150 />
 
 - [iA Writer](https://apps.apple.com/us/app/ia-writer/id775737590?mt=12) is a Markdown Writing app:
-    - Faster way to write MDX website media 
+    - Faster way to write MDX website material 
     - Extensive Style Check
     - Focus
         - Sentence
